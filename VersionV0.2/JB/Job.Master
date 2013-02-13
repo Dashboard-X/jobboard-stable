@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Job.Master.cs" Inherits="JB.JOB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--add favicon-->
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <title>Ahrcloud | Free version</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="jobmaster.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/cs2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 
+    summary
+    This code is liscenced by ahrcloud.com
+    under free creative common liscence, but 
+    attribution must be made to the author
+    site at www.ahrcloud.com or info@ahrcloud.com
+    
+    -->
+    <!-- head one -->
+    <form id="form1" class="topwrap" runat="server">
+    <!-- top bar -->
+    <div id="topwrapper">
+        <!--hitems-->
+        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="jobdfttop" NavigateUrl="~/Default.aspx">► Home</asp:HyperLink>
+        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CssClass="jobdfttop"
+            OnClick="LinkButton1_Click">► Recruiters</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CssClass="jobdfttop"
+            OnClick="LinkButton2_Click">► JobSeekers</asp:LinkButton>
+    </div>
+    <div align="center">
+        <!--background header-->
+        <div class="banner">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Brandimages/brand_defaulthometag.png" />
+        </div>
+        <div class="cleardata">
+        </div>
+        <div class="tpbar">
+        </div>
+        <!--contents-->
+        <div class="pgwidthset">
+            <div align="left" style="width: 1024px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <div class="cleardata">
+    </div>
+    <!-- copy right-->
+    <div class="jbfooter">
+        <hr size="1" />
+        <div class="ftlabel">
+            <asp:Image ID="imgprivate" runat="server" ImageUrl="images/ft_privacy.png" />
+            <asp:HyperLink ID="HyperLink3" CssClass="blackh2" runat="server" NavigateUrl="~/jbprivacy.aspx">Privacy</asp:HyperLink>
+        </div>
+        <div class="ftlabel">
+            <asp:Image ID="imgterms" ImageUrl="images/ft_terms.png" runat="server" />
+            <asp:HyperLink ID="HyperLink1" CssClass="blackh2" runat="server" NavigateUrl="~/jbterms.aspx">Terms</asp:HyperLink>
+        </div>
+        <div class="ftlabel">
+            <asp:Image ID="imgcopyinformation" ImageUrl="images/ft_copyinfo.png" runat="server" />
+            <asp:Label ID="Label1" runat="server" Text="Copyright 2011"></asp:Label>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

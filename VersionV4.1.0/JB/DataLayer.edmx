@@ -1,0 +1,2143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="TB_APPJOBMAPPER" EntityType="Model.Store.TB_APPJOBMAPPER" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_APPLICATIONS" EntityType="Model.Store.TB_APPLICATIONS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_APPLICATIONSTATUS" EntityType="Model.Store.TB_APPLICATIONSTATUS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_ARTICLES" EntityType="Model.Store.TB_ARTICLES" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_BRANDING" EntityType="Model.Store.TB_BRANDING" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_CANDIDATES" EntityType="Model.Store.TB_CANDIDATES" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_CATEGORIES" EntityType="Model.Store.TB_CATEGORIES" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_CATEGORYTOTERM" EntityType="Model.Store.TB_CATEGORYTOTERM" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_DOCUMENTS" EntityType="Model.Store.TB_DOCUMENTS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_EMAILRESPONSE" EntityType="Model.Store.TB_EMAILRESPONSE" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_EMAILRESPONSETERMS" EntityType="Model.Store.TB_EMAILRESPONSETERMS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_EMAILTEMPLATES" EntityType="Model.Store.TB_EMAILTEMPLATES" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_EMAILTYPES" EntityType="Model.Store.TB_EMAILTYPES" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_JOBS" EntityType="Model.Store.TB_JOBS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_JOBTABLE" EntityType="Model.Store.TB_JOBTABLE" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_JOBVIEWS" EntityType="Model.Store.TB_JOBVIEWS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_RECRUITERS" EntityType="Model.Store.TB_RECRUITERS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_RECUSERMAPPER" EntityType="Model.Store.TB_RECUSERMAPPER" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_SPAMREPORT" EntityType="Model.Store.TB_SPAMREPORT" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_SUBSCRIPTIONS" EntityType="Model.Store.TB_SUBSCRIPTIONS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_TERMS" EntityType="Model.Store.TB_TERMS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_TERMSLIST" EntityType="Model.Store.TB_TERMSLIST" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_USERS" EntityType="Model.Store.TB_USERS" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="TB_VERSION" EntityType="Model.Store.TB_VERSION" store:Type="Tables" Schema="ROOT" />
+          <EntitySet Name="VW_AGGREGATEDMPAGE" EntityType="Model.Store.VW_AGGREGATEDMPAGE" store:Type="Views" store:Schema="ROOT" store:Name="VW_AGGREGATEDMPAGE">
+            <DefiningQuery>SELECT 
+      "VW_AGGREGATEDMPAGE"."APPLICATIONVOLUME" AS "APPLICATIONVOLUME", 
+      "VW_AGGREGATEDMPAGE"."IDJOBS" AS "IDJOBS", 
+      "VW_AGGREGATEDMPAGE"."STITLE" AS "STITLE", 
+      "VW_AGGREGATEDMPAGE"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_AGGREGATEDMPAGE"."SFREETEXT" AS "SFREETEXT", 
+      "VW_AGGREGATEDMPAGE"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_AGGREGATEDMPAGE"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_AGGREGATEDMPAGE"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_AGGREGATEDMPAGE"."SMINSAL" AS "SMINSAL", 
+      "VW_AGGREGATEDMPAGE"."EMPLOYEEID" AS "EMPLOYEEID", 
+      "VW_AGGREGATEDMPAGE"."SMAXSAL" AS "SMAXSAL"
+      FROM "ROOT"."VW_AGGREGATEDMPAGE" "VW_AGGREGATEDMPAGE"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_AGGREGATEDMULTI" EntityType="Model.Store.VW_AGGREGATEDMULTI" store:Type="Views" store:Schema="ROOT" store:Name="VW_AGGREGATEDMULTI">
+            <DefiningQuery>SELECT 
+      "VW_AGGREGATEDMULTI"."APPLICATIONVOLUME" AS "APPLICATIONVOLUME", 
+      "VW_AGGREGATEDMULTI"."STERM" AS "STERM", 
+      "VW_AGGREGATEDMULTI"."IDJOBS" AS "IDJOBS", 
+      "VW_AGGREGATEDMULTI"."STITLE" AS "STITLE", 
+      "VW_AGGREGATEDMULTI"."SCATEGORY" AS "SCATEGORY", 
+      "VW_AGGREGATEDMULTI"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_AGGREGATEDMULTI"."SFREETEXT" AS "SFREETEXT", 
+      "VW_AGGREGATEDMULTI"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_AGGREGATEDMULTI"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_AGGREGATEDMULTI"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_AGGREGATEDMULTI"."SMINSAL" AS "SMINSAL", 
+      "VW_AGGREGATEDMULTI"."EMPLOYEEID" AS "EMPLOYEEID", 
+      "VW_AGGREGATEDMULTI"."TERMID" AS "TERMID", 
+      "VW_AGGREGATEDMULTI"."SMAXSAL" AS "SMAXSAL"
+      FROM "ROOT"."VW_AGGREGATEDMULTI" "VW_AGGREGATEDMULTI"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETALLREC" EntityType="Model.Store.VW_GETALLREC" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETALLREC">
+            <DefiningQuery>SELECT 
+      "VW_GETALLREC"."EMPID" AS "EMPID", 
+      "VW_GETALLREC"."SCOMPLETEDESC" AS "SCOMPLETEDESC", 
+      "VW_GETALLREC"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETALLREC"."MXARTICLEDATA" AS "MXARTICLEDATA", 
+      "VW_GETALLREC"."SRECRUITERNAME" AS "SRECRUITERNAME", 
+      "VW_GETALLREC"."SWEBSITE" AS "SWEBSITE", 
+      "VW_GETALLREC"."SEMAILADDRESS" AS "SEMAILADDRESS", 
+      "VW_GETALLREC"."MXIDJOBS" AS "MXIDJOBS"
+      FROM "ROOT"."VW_GETALLREC" "VW_GETALLREC"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETAPP" EntityType="Model.Store.VW_GETAPP" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETAPP">
+            <DefiningQuery>SELECT 
+      "VW_GETAPP"."IDJOBS" AS "IDJOBS", 
+      "VW_GETAPP"."STITLE" AS "STITLE", 
+      "VW_GETAPP"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETAPP"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETAPP"."COMPLETEURL" AS "COMPLETEURL", 
+      "VW_GETAPP"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_GETAPP"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETAPP"."SMINSAL" AS "SMINSAL", 
+      "VW_GETAPP"."SMAXSAL" AS "SMAXSAL", 
+      "VW_GETAPP"."SREF" AS "SREF", 
+      "VW_GETAPP"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETAPP"."SJOBSTARTDATE" AS "SJOBSTARTDATE", 
+      "VW_GETAPP"."SJOBENDDATE" AS "SJOBENDDATE", 
+      "VW_GETAPP"."IDAPPLICATIONS" AS "IDAPPLICATIONS", 
+      "VW_GETAPP"."LICANDIDATEID" AS "LICANDIDATEID", 
+      "VW_GETAPP"."DTENTERED" AS "DTENTERED", 
+      "VW_GETAPP"."AFIRSTNAME" AS "AFIRSTNAME", 
+      "VW_GETAPP"."ALASTNAME" AS "ALASTNAME", 
+      "VW_GETAPP"."ADATEOFBIRTH" AS "ADATEOFBIRTH", 
+      "VW_GETAPP"."APROFILESUMMARY" AS "APROFILESUMMARY", 
+      "VW_GETAPP"."DOCUMENTID" AS "DOCUMENTID", 
+      "VW_GETAPP"."AAPPLICATIONEMAIL" AS "AAPPLICATIONEMAIL", 
+      "VW_GETAPP"."EMPID" AS "EMPID", 
+      "VW_GETAPP"."SRECRUITERNAME" AS "SRECRUITERNAME"
+      FROM "ROOT"."VW_GETAPP" "VW_GETAPP"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETDETAILSPAGES" EntityType="Model.Store.VW_GETDETAILSPAGES" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETDETAILSPAGES">
+            <DefiningQuery>SELECT 
+      "VW_GETDETAILSPAGES"."IDJOBS" AS "IDJOBS", 
+      "VW_GETDETAILSPAGES"."MINRANGE" AS "MINRANGE", 
+      "VW_GETDETAILSPAGES"."MAXRANGE" AS "MAXRANGE", 
+      "VW_GETDETAILSPAGES"."TERMID" AS "TERMID", 
+      "VW_GETDETAILSPAGES"."CATID" AS "CATID", 
+      "VW_GETDETAILSPAGES"."STERM" AS "STERM"
+      FROM "ROOT"."VW_GETDETAILSPAGES" "VW_GETDETAILSPAGES"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETJOBS" EntityType="Model.Store.VW_GETJOBS" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETJOBS">
+            <DefiningQuery>SELECT 
+      "VW_GETJOBS"."IDJOBS" AS "IDJOBS", 
+      "VW_GETJOBS"."SCATEGORY" AS "SCATEGORY", 
+      "VW_GETJOBS"."STITLE" AS "STITLE", 
+      "VW_GETJOBS"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETJOBS"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETJOBS"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETJOBS"."STERM" AS "STERM", 
+      "VW_GETJOBS"."TERMID" AS "TERMID", 
+      "VW_GETJOBS"."SJOBSTARTDATE" AS "SJOBSTARTDATE", 
+      "VW_GETJOBS"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETJOBS"."SMINSAL" AS "SMINSAL", 
+      "VW_GETJOBS"."SMAXSAL" AS "SMAXSAL", 
+      "VW_GETJOBS"."EMPID" AS "EMPID", 
+      "VW_GETJOBS"."SJOBENDDATE" AS "SJOBENDDATE", 
+      "VW_GETJOBS"."DTENTEREDDATE" AS "DTENTEREDDATE"
+      FROM "ROOT"."VW_GETJOBS" "VW_GETJOBS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETJOBSARCH" EntityType="Model.Store.VW_GETJOBSARCH" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETJOBSARCH">
+            <DefiningQuery>SELECT 
+      "VW_GETJOBSARCH"."IDJOBS" AS "IDJOBS", 
+      "VW_GETJOBSARCH"."SJOBENDDATE" AS "SJOBENDDATE", 
+      "VW_GETJOBSARCH"."STITLE" AS "STITLE", 
+      "VW_GETJOBSARCH"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETJOBSARCH"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETJOBSARCH"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETJOBSARCH"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_GETJOBSARCH"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETJOBSARCH"."SMINSAL" AS "SMINSAL", 
+      "VW_GETJOBSARCH"."EMPID" AS "EMPID", 
+      "VW_GETJOBSARCH"."SMAXSAL" AS "SMAXSAL"
+      FROM "ROOT"."VW_GETJOBSARCH" "VW_GETJOBSARCH"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETJOBSARCHIVED" EntityType="Model.Store.VW_GETJOBSARCHIVED" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETJOBSARCHIVED">
+            <DefiningQuery>SELECT 
+      "VW_GETJOBSARCHIVED"."IDJOBS" AS "IDJOBS", 
+      "VW_GETJOBSARCHIVED"."STITLE" AS "STITLE", 
+      "VW_GETJOBSARCHIVED"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETJOBSARCHIVED"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETJOBSARCHIVED"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETJOBSARCHIVED"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_GETJOBSARCHIVED"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETJOBSARCHIVED"."SMINSAL" AS "SMINSAL", 
+      "VW_GETJOBSARCHIVED"."EMPLOYEEID" AS "EMPLOYEEID", 
+      "VW_GETJOBSARCHIVED"."TERMID" AS "TERMID", 
+      "VW_GETJOBSARCHIVED"."SMAXSAL" AS "SMAXSAL"
+      FROM "ROOT"."VW_GETJOBSARCHIVED" "VW_GETJOBSARCHIVED"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETJOBSSINGLE" EntityType="Model.Store.VW_GETJOBSSINGLE" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETJOBSSINGLE">
+            <DefiningQuery>SELECT 
+      "VW_GETJOBSSINGLE"."IDJOBS" AS "IDJOBS", 
+      "VW_GETJOBSSINGLE"."SCATEGORY" AS "SCATEGORY", 
+      "VW_GETJOBSSINGLE"."STITLE" AS "STITLE", 
+      "VW_GETJOBSSINGLE"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETJOBSSINGLE"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETJOBSSINGLE"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETJOBSSINGLE"."STERM" AS "STERM", 
+      "VW_GETJOBSSINGLE"."TERMID" AS "TERMID", 
+      "VW_GETJOBSSINGLE"."SJOBSTARTDATE" AS "SJOBSTARTDATE", 
+      "VW_GETJOBSSINGLE"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETJOBSSINGLE"."SMINSAL" AS "SMINSAL", 
+      "VW_GETJOBSSINGLE"."SMAXSAL" AS "SMAXSAL", 
+      "VW_GETJOBSSINGLE"."EMPID" AS "EMPID", 
+      "VW_GETJOBSSINGLE"."SJOBENDDATE" AS "SJOBENDDATE", 
+      "VW_GETJOBSSINGLE"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_GETJOBSSINGLE"."CATID" AS "CATID"
+      FROM "ROOT"."VW_GETJOBSSINGLE" "VW_GETJOBSSINGLE"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETJOBSSINGLEARCH" EntityType="Model.Store.VW_GETJOBSSINGLEARCH" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETJOBSSINGLEARCH">
+            <DefiningQuery>SELECT 
+      "VW_GETJOBSSINGLEARCH"."IDJOBS" AS "IDJOBS", 
+      "VW_GETJOBSSINGLEARCH"."STITLE" AS "STITLE", 
+      "VW_GETJOBSSINGLEARCH"."SSHORTDESCRIPTION" AS "SSHORTDESCRIPTION", 
+      "VW_GETJOBSSINGLEARCH"."SFREETEXT" AS "SFREETEXT", 
+      "VW_GETJOBSSINGLEARCH"."SDESCRIPTION" AS "SDESCRIPTION", 
+      "VW_GETJOBSSINGLEARCH"."DTENTEREDDATE" AS "DTENTEREDDATE", 
+      "VW_GETJOBSSINGLEARCH"."SSALARYTEXT" AS "SSALARYTEXT", 
+      "VW_GETJOBSSINGLEARCH"."SMINSAL" AS "SMINSAL", 
+      "VW_GETJOBSSINGLEARCH"."EMPLOYEEID" AS "EMPLOYEEID", 
+      "VW_GETJOBSSINGLEARCH"."TERMID" AS "TERMID", 
+      "VW_GETJOBSSINGLEARCH"."SMAXSAL" AS "SMAXSAL", 
+      "VW_GETJOBSSINGLEARCH"."CATID" AS "CATID"
+      FROM "ROOT"."VW_GETJOBSSINGLEARCH" "VW_GETJOBSSINGLEARCH"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETMYAPPS" EntityType="Model.Store.VW_GETMYAPPS" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETMYAPPS">
+            <DefiningQuery>SELECT 
+      "VW_GETMYAPPS"."IDAPPLICATIONS" AS "IDAPPLICATIONS", 
+      "VW_GETMYAPPS"."SRECRUITERNAME" AS "SRECRUITERNAME", 
+      "VW_GETMYAPPS"."APPLICATIONSTATUS" AS "APPLICATIONSTATUS", 
+      "VW_GETMYAPPS"."STITLE" AS "STITLE", 
+      "VW_GETMYAPPS"."LICANDIDATEID" AS "LICANDIDATEID", 
+      "VW_GETMYAPPS"."DTENTERED" AS "DTENTERED", 
+      "VW_GETMYAPPS"."AFIRSTNAME" AS "AFIRSTNAME", 
+      "VW_GETMYAPPS"."ALASTNAME" AS "ALASTNAME", 
+      "VW_GETMYAPPS"."APROFILESUMMARY" AS "APROFILESUMMARY", 
+      "VW_GETMYAPPS"."UUSERNAME" AS "UUSERNAME", 
+      "VW_GETMYAPPS"."IDCANDIDATES" AS "IDCANDIDATES", 
+      "VW_GETMYAPPS"."CCANDIDATENAME" AS "CCANDIDATENAME", 
+      "VW_GETMYAPPS"."CFIRSTNAME" AS "CFIRSTNAME", 
+      "VW_GETMYAPPS"."CLASTNAME" AS "CLASTNAME", 
+      "VW_GETMYAPPS"."IDUSERS" AS "IDUSERS"
+      FROM "ROOT"."VW_GETMYAPPS" "VW_GETMYAPPS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETSUBJECTEMAILAPPS" EntityType="Model.Store.VW_GETSUBJECTEMAILAPPS" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETSUBJECTEMAILAPPS">
+            <DefiningQuery>SELECT 
+      "VW_GETSUBJECTEMAILAPPS"."SREF" AS "SREF", 
+      "VW_GETSUBJECTEMAILAPPS"."STITLE" AS "STITLE", 
+      "VW_GETSUBJECTEMAILAPPS"."IDJOBS" AS "IDJOBS"
+      FROM "ROOT"."VW_GETSUBJECTEMAILAPPS" "VW_GETSUBJECTEMAILAPPS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_GETUSERCANS" EntityType="Model.Store.VW_GETUSERCANS" store:Type="Views" store:Schema="ROOT" store:Name="VW_GETUSERCANS">
+            <DefiningQuery>SELECT 
+      "VW_GETUSERCANS"."IDUSERS" AS "IDUSERS", 
+      "VW_GETUSERCANS"."UUSERTYPE" AS "UUSERTYPE", 
+      "VW_GETUSERCANS"."UUSERNAME" AS "UUSERNAME", 
+      "VW_GETUSERCANS"."UPASSWORD" AS "UPASSWORD", 
+      "VW_GETUSERCANS"."UPASSWORDHINT" AS "UPASSWORDHINT", 
+      "VW_GETUSERCANS"."UFIRSTNAME" AS "UFIRSTNAME", 
+      "VW_GETUSERCANS"."ULASTNAME" AS "ULASTNAME", 
+      "VW_GETUSERCANS"."UISPRIMARY" AS "UISPRIMARY", 
+      "VW_GETUSERCANS"."UCANDIDATEID" AS "UCANDIDATEID", 
+      "VW_GETUSERCANS"."IDCANDIDATES" AS "IDCANDIDATES", 
+      "VW_GETUSERCANS"."CCANDIDATENAME" AS "CCANDIDATENAME", 
+      "VW_GETUSERCANS"."CFIRSTNAME" AS "CFIRSTNAME", 
+      "VW_GETUSERCANS"."CDATEOFBIRTH" AS "CDATEOFBIRTH", 
+      "VW_GETUSERCANS"."CLASTNAME" AS "CLASTNAME", 
+      "VW_GETUSERCANS"."CADDRESS1" AS "CADDRESS1", 
+      "VW_GETUSERCANS"."CADDRESS2" AS "CADDRESS2", 
+      "VW_GETUSERCANS"."CADDRESS3" AS "CADDRESS3", 
+      "VW_GETUSERCANS"."CTOWN" AS "CTOWN", 
+      "VW_GETUSERCANS"."CCOUNTY" AS "CCOUNTY", 
+      "VW_GETUSERCANS"."CPOSTCODE" AS "CPOSTCODE", 
+      "VW_GETUSERCANS"."CHOMEPHONE" AS "CHOMEPHONE", 
+      "VW_GETUSERCANS"."CWORKPHONE" AS "CWORKPHONE", 
+      "VW_GETUSERCANS"."CDTENTERED" AS "CDTENTERED", 
+      "VW_GETUSERCANS"."CCOUNTRY" AS "CCOUNTRY"
+      FROM "ROOT"."VW_GETUSERCANS" "VW_GETUSERCANS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_JOBPOSTEDVIEW" EntityType="Model.Store.VW_JOBPOSTEDVIEW" store:Type="Views" store:Schema="ROOT" store:Name="VW_JOBPOSTEDVIEW">
+            <DefiningQuery>SELECT 
+      "VW_JOBPOSTEDVIEW"."IDJOBS" AS "IDJOBS", 
+      "VW_JOBPOSTEDVIEW"."EMPID" AS "EMPID", 
+      "VW_JOBPOSTEDVIEW"."DTENTEREDDATE" AS "DTENTEREDDATE"
+      FROM "ROOT"."VW_JOBPOSTEDVIEW" "VW_JOBPOSTEDVIEW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_JOBSOUTMAIL" EntityType="Model.Store.VW_JOBSOUTMAIL" store:Type="Views" store:Schema="ROOT" store:Name="VW_JOBSOUTMAIL">
+            <DefiningQuery>SELECT 
+      "VW_JOBSOUTMAIL"."STITLE" AS "STITLE", 
+      "VW_JOBSOUTMAIL"."EMAILADDRESS" AS "EMAILADDRESS", 
+      "VW_JOBSOUTMAIL"."IDJOBS" AS "IDJOBS"
+      FROM "ROOT"."VW_JOBSOUTMAIL" "VW_JOBSOUTMAIL"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_JOBTORECRUITER" EntityType="Model.Store.VW_JOBTORECRUITER" store:Type="Views" store:Schema="ROOT" store:Name="VW_JOBTORECRUITER">
+            <DefiningQuery>SELECT 
+      "VW_JOBTORECRUITER"."IDJOBS" AS "IDJOBS", 
+      "VW_JOBTORECRUITER"."EMPID" AS "EMPID"
+      FROM "ROOT"."VW_JOBTORECRUITER" "VW_JOBTORECRUITER"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_RECARTICLES" EntityType="Model.Store.VW_RECARTICLES" store:Type="Views" store:Schema="ROOT" store:Name="VW_RECARTICLES">
+            <DefiningQuery>SELECT 
+      "VW_RECARTICLES"."EMPID" AS "EMPID", 
+      "VW_RECARTICLES"."SRECRUITERNAME" AS "SRECRUITERNAME", 
+      "VW_RECARTICLES"."SARTICLEID" AS "SARTICLEID", 
+      "VW_RECARTICLES"."ARTICLENAME" AS "ARTICLENAME", 
+      "VW_RECARTICLES"."ARTICLE_DATA" AS "ARTICLE_DATA"
+      FROM "ROOT"."VW_RECARTICLES" "VW_RECARTICLES"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_RECUSERS" EntityType="Model.Store.VW_RECUSERS" store:Type="Views" store:Schema="ROOT" store:Name="VW_RECUSERS">
+            <DefiningQuery>SELECT 
+      "VW_RECUSERS"."IDJOBS" AS "IDJOBS", 
+      "VW_RECUSERS"."EMPID" AS "EMPID", 
+      "VW_RECUSERS"."UFIRSTNAME" AS "UFIRSTNAME", 
+      "VW_RECUSERS"."ULASTNAME" AS "ULASTNAME"
+      FROM "ROOT"."VW_RECUSERS" "VW_RECUSERS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_SUBREC" EntityType="Model.Store.VW_SUBREC" store:Type="Views" store:Schema="ROOT" store:Name="VW_SUBREC">
+            <DefiningQuery>SELECT 
+      "VW_SUBREC"."SRECRUITERNAME" AS "SRECRUITERNAME", 
+      "VW_SUBREC"."MXARTICLEDATA" AS "MXARTICLEDATA", 
+      "VW_SUBREC"."MXIDJOBS" AS "MXIDJOBS", 
+      "VW_SUBREC"."MXARTICLENAME" AS "MXARTICLENAME", 
+      "VW_SUBREC"."EMPID" AS "EMPID", 
+      "VW_SUBREC"."MXARTICLEID" AS "MXARTICLEID"
+      FROM "ROOT"."VW_SUBREC" "VW_SUBREC"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="TB_APPJOBMAPPER">
+          <Key>
+            <PropertyRef Name="IDAPPJOBMAPPER" />
+          </Key>
+          <Property Name="IDAPPJOBMAPPER" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="IDAPPLICATIONS" Type="varchar2" MaxLength="16" />
+          <Property Name="IDJOBS" Type="varchar2" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="TB_APPLICATIONS">
+          <Key>
+            <PropertyRef Name="IDAPPLICATIONS" />
+          </Key>
+          <Property Name="IDAPPLICATIONS" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="LICANDIDATEID" Type="varchar2" MaxLength="16" />
+          <Property Name="DTENTERED" Type="date" />
+          <Property Name="AFIRSTNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="ALASTNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="ADATEOFBIRTH" Type="date" />
+          <Property Name="APROFILESUMMARY" Type="varchar2" MaxLength="500" />
+          <Property Name="DOCUMENTID" Type="varchar2" MaxLength="16" />
+          <Property Name="AAPPLICATIONEMAIL" Type="varchar2" MaxLength="255" />
+          <Property Name="AAPPLICATIONSTATUS" Type="number" Precision="10" />
+          <Property Name="DTSTATUSCHANGED" Type="date" />
+        </EntityType>
+        <EntityType Name="TB_APPLICATIONSTATUS">
+          <Key>
+            <PropertyRef Name="IDTB_APPLICATIONSTATUS" />
+          </Key>
+          <Property Name="IDTB_APPLICATIONSTATUS" Type="number" Nullable="false" Precision="10" />
+          <Property Name="AAPPLICATIONSTATUS" Type="number" Precision="10" />
+          <Property Name="STERM" Type="varchar2" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TB_ARTICLES">
+          <Key>
+            <PropertyRef Name="SARTICLEID" />
+          </Key>
+          <Property Name="SARTICLEID" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="ARTICLENAME" Type="varchar2" MaxLength="100" />
+          <Property Name="ARTICLE_DATA" Type="varchar2" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="TB_BRANDING">
+          <Key>
+            <PropertyRef Name="IDTB_BRANDING" />
+          </Key>
+          <Property Name="IDTB_BRANDING" Type="number" Nullable="false" Precision="10" />
+          <Property Name="KPINAME" Type="varchar2" MaxLength="45" />
+          <Property Name="KPIVALUE" Type="clob" />
+        </EntityType>
+        <EntityType Name="TB_CANDIDATES">
+          <Key>
+            <PropertyRef Name="IDCANDIDATES" />
+          </Key>
+          <Property Name="IDCANDIDATES" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="CCANDIDATENAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CLASTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CADDRESS1" Type="varchar2" MaxLength="45" />
+          <Property Name="CADDRESS2" Type="varchar2" MaxLength="45" />
+          <Property Name="CADDRESS3" Type="varchar2" MaxLength="45" />
+          <Property Name="CTOWN" Type="varchar2" MaxLength="45" />
+          <Property Name="CCOUNTY" Type="varchar2" MaxLength="45" />
+          <Property Name="CPOSTCODE" Type="varchar2" MaxLength="45" />
+          <Property Name="CHOMEPHONE" Type="varchar2" MaxLength="45" />
+          <Property Name="CWORKPHONE" Type="varchar2" MaxLength="45" />
+          <Property Name="CDTENTERED" Type="date" />
+          <Property Name="CCOUNTRY" Type="varchar2" MaxLength="45" />
+          <Property Name="CDATEOFBIRTH" Type="date" />
+        </EntityType>
+        <EntityType Name="TB_CATEGORIES">
+          <Key>
+            <PropertyRef Name="CATID" />
+          </Key>
+          <Property Name="CATID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="SCATEGORY" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TB_CATEGORYTOTERM">
+          <Key>
+            <PropertyRef Name="IDCATEGORYTOTERM" />
+          </Key>
+          <Property Name="IDCATEGORYTOTERM" Type="number" Nullable="false" Precision="10" />
+          <Property Name="CATID" Type="number" Precision="10" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_DOCUMENTS">
+          <Key>
+            <PropertyRef Name="DOCUMENTID" />
+          </Key>
+          <Property Name="DOCUMENTID" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="DOCUMENTNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="DOC_DATA" Type="clob" />
+          <Property Name="DOC_URL" Type="varchar2" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TB_EMAILRESPONSE">
+          <Key>
+            <PropertyRef Name="IDEMAILRESPONSE" />
+          </Key>
+          <Property Name="IDEMAILRESPONSE" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="RSTATUS" Type="number" Precision="10" />
+          <Property Name="RDTSENT" Type="timestamp" />
+          <Property Name="REMAILTYPE" Type="number" Precision="10" />
+          <Property Name="REMAILADDRESS" Type="varchar2" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TB_EMAILRESPONSETERMS">
+          <Key>
+            <PropertyRef Name="IDEMAILRESPONSETERMS" />
+          </Key>
+          <Property Name="IDEMAILRESPONSETERMS" Type="number" Nullable="false" Precision="10" />
+          <Property Name="IDEMAILRESPONSE" Type="number" Precision="10" />
+          <Property Name="CATID" Type="number" Precision="10" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_EMAILTEMPLATES">
+          <Key>
+            <PropertyRef Name="IDEMAILTEMPLATES" />
+          </Key>
+          <Property Name="IDEMAILTEMPLATES" Type="number" Nullable="false" Precision="10" />
+          <Property Name="EHEADER" Type="clob" />
+          <Property Name="EDESCRIPTION" Type="clob" />
+          <Property Name="EFOOTER" Type="clob" />
+          <Property Name="ETEMPLATECHKID" Type="varchar2" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="TB_EMAILTYPES">
+          <Key>
+            <PropertyRef Name="REMAILTYPE" />
+          </Key>
+          <Property Name="REMAILTYPE" Type="number" Nullable="false" Precision="10" />
+          <Property Name="STEXT" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TB_JOBS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+          <Property Name="SREF" Type="varchar2" MaxLength="45" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SJOBSTARTDATE" Type="date" />
+          <Property Name="SJOBENDDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="TB_JOBTABLE">
+          <Key>
+            <PropertyRef Name="JTABID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" MaxLength="16" />
+          <Property Name="CATID" Type="number" Precision="10" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="16" />
+          <Property Name="JTABID" Type="number" Nullable="false" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_JOBVIEWS">
+          <Key>
+            <PropertyRef Name="IDJOBVIEWS" />
+          </Key>
+          <Property Name="IDJOBVIEWS" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="16" />
+          <Property Name="DTENTERED" Type="date" />
+          <Property Name="JVIEWTYPE" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_RECRUITERS">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SADDRESS1" Type="varchar2" MaxLength="255" />
+          <Property Name="SADDRESS2" Type="varchar2" MaxLength="255" />
+          <Property Name="SADDRESS3" Type="varchar2" MaxLength="255" />
+          <Property Name="STOWN" Type="varchar2" MaxLength="50" />
+          <Property Name="SCOUNTY" Type="varchar2" MaxLength="50" />
+          <Property Name="SCOUNTRY" Type="varchar2" MaxLength="45" />
+          <Property Name="SPOSTCODE" Type="varchar2" MaxLength="10" />
+          <Property Name="SEMAILADDRESS" Type="varchar2" MaxLength="255" />
+          <Property Name="SWEBSITE" Type="varchar2" MaxLength="500" />
+          <Property Name="SDESCRIPTION" Type="varchar2" MaxLength="500" />
+          <Property Name="SCOMPLETEDESC" Type="clob" />
+          <Property Name="SDTENTERED" Type="date" />
+          <Property Name="SENTEREDBYID" Type="number" Precision="10" />
+          <Property Name="SISFEATURED" Type="number" Precision="10" />
+          <Property Name="SARTICLEID" Type="varchar2" MaxLength="16" />
+          <Property Name="SISACTIVE" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_RECUSERMAPPER">
+          <Key>
+            <PropertyRef Name="IDUSERMAPPER" />
+          </Key>
+          <Property Name="IDUSERMAPPER" Type="number" Nullable="false" Precision="10" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="16" />
+          <Property Name="IDUSERS" Type="varchar2" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="TB_SPAMREPORT">
+          <Key>
+            <PropertyRef Name="IDTB_SPAMREPORT" />
+          </Key>
+          <Property Name="IDTB_SPAMREPORT" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="SPAMINDEX" Type="number" Precision="10" />
+          <Property Name="SPAMREASON" Type="varchar2" MaxLength="1000" />
+          <Property Name="DTENTERED" Type="date" />
+          <Property Name="IPUSER" Type="varchar2" MaxLength="45" />
+          <Property Name="USERAGENTS" Type="varchar2" MaxLength="1000" />
+          <Property Name="JOBID" Type="varchar2" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="TB_SUBSCRIPTIONS">
+          <Key>
+            <PropertyRef Name="IDTB_SUBSCRIPTIONS" />
+          </Key>
+          <Property Name="IDTB_SUBSCRIPTIONS" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="EMAILADDRESS" Type="varchar2" MaxLength="500" />
+          <Property Name="CATID" Type="number" Precision="10" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_TERMS">
+          <Key>
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Name="TERMID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="STERM" Type="varchar2" MaxLength="100" />
+          <Property Name="MINRANGE" Type="number" Precision="10" />
+          <Property Name="MAXRANGE" Type="number" Precision="10" />
+          <Property Name="LIPARENT" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_TERMSLIST">
+          <Key>
+            <PropertyRef Name="IDTERMSLIST" />
+          </Key>
+          <Property Name="IDTERMSLIST" Type="number" Nullable="false" Precision="10" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+          <Property Name="TERMLEVEL" Type="number" Precision="10" />
+        </EntityType>
+        <EntityType Name="TB_USERS">
+          <Key>
+            <PropertyRef Name="IDUSERS" />
+          </Key>
+          <Property Name="IDUSERS" Type="varchar2" Nullable="false" MaxLength="16" />
+          <Property Name="UUSERTYPE" Type="number" Precision="10" />
+          <Property Name="UUSERNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="UPASSWORD" Type="varchar2" MaxLength="45" />
+          <Property Name="UPASSWORDHINT" Type="varchar2" MaxLength="255" />
+          <Property Name="UFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="ULASTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="UISPRIMARY" Type="number" Precision="10" />
+          <Property Name="UCANDIDATEID" Type="varchar2" MaxLength="16" />
+          <Property Name="UACTIVATION" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TB_VERSION">
+          <Key>
+            <PropertyRef Name="IDVERSION" />
+          </Key>
+          <Property Name="IDVERSION" Type="number" Nullable="false" Precision="10" />
+          <Property Name="VERSIONNUMBER" Type="varchar2" MaxLength="45" />
+          <Property Name="CHECKOUT" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_AGGREGATEDMPAGE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_AGGREGATEDMPAGE">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="APPLICATIONVOLUME" Type="number" />
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="EMPLOYEEID" Type="varchar2" MaxLength="50" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_AGGREGATEDMULTI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_AGGREGATEDMULTI">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Name="APPLICATIONVOLUME" Type="number" />
+          <Property Name="STERM" Type="varchar2" MaxLength="100" />
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SCATEGORY" Type="varchar2" MaxLength="100" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="EMPLOYEEID" Type="varchar2" MaxLength="50" />
+          <Property Name="TERMID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETALLREC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETALLREC">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SCOMPLETEDESC" Type="clob" />
+          <Property Name="SDESCRIPTION" Type="varchar2" MaxLength="500" />
+          <Property Name="MXARTICLEDATA" Type="varchar2" MaxLength="1000" />
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SWEBSITE" Type="varchar2" MaxLength="500" />
+          <Property Name="SEMAILADDRESS" Type="varchar2" MaxLength="255" />
+          <Property Name="MXIDJOBS" Type="number" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETAPP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETAPP">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="IDAPPLICATIONS" />
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="COMPLETEURL" Type="varchar2" MaxLength="500" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+          <Property Name="SREF" Type="varchar2" MaxLength="45" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SJOBSTARTDATE" Type="date" />
+          <Property Name="SJOBENDDATE" Type="date" />
+          <Property Name="IDAPPLICATIONS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="LICANDIDATEID" Type="varchar2" MaxLength="50" />
+          <Property Name="DTENTERED" Type="date" />
+          <Property Name="AFIRSTNAME" Type="varchar2" MaxLength="45" />
+          <Property Name="ALASTNAME" Type="varchar2" MaxLength="45" />
+          <Property Name="ADATEOFBIRTH" Type="date" />
+          <Property Name="APROFILESUMMARY" Type="varchar2" MaxLength="500" />
+          <Property Name="DOCUMENTID" Type="varchar2" MaxLength="50" />
+          <Property Name="AAPPLICATIONEMAIL" Type="varchar2" MaxLength="255" />
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETDETAILSPAGES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETDETAILSPAGES">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="MINRANGE" Type="number" Precision="10" />
+          <Property Name="MAXRANGE" Type="number" Precision="10" />
+          <Property Name="TERMID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="CATID" Type="number" Precision="10" />
+          <Property Name="STERM" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETJOBS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETJOBS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SCATEGORY" Type="varchar2" MaxLength="100" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="STERM" Type="varchar2" MaxLength="100" />
+          <Property Name="TERMID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="SJOBSTARTDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="50" />
+          <Property Name="SJOBENDDATE" Type="date" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETJOBSARCH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETJOBSARCH">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SJOBENDDATE" Type="date" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="50" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETJOBSARCHIVED' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETJOBSARCHIVED">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPLOYEEID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="EMPLOYEEID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETJOBSSINGLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETJOBSSINGLE">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SCATEGORY" Type="varchar2" MaxLength="100" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="STERM" Type="varchar2" MaxLength="100" />
+          <Property Name="TERMID" Type="number" Nullable="false" Precision="10" />
+          <Property Name="SJOBSTARTDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="50" />
+          <Property Name="SJOBENDDATE" Type="date" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="CATID" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETJOBSSINGLEARCH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETJOBSSINGLEARCH">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPLOYEEID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="SSHORTDESCRIPTION" Type="varchar2" MaxLength="255" />
+          <Property Name="SFREETEXT" Type="varchar2" MaxLength="255" />
+          <Property Name="SDESCRIPTION" Type="clob" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+          <Property Name="SSALARYTEXT" Type="varchar2" MaxLength="100" />
+          <Property Name="SMINSAL" Type="number" Precision="10" />
+          <Property Name="EMPLOYEEID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="TERMID" Type="number" Precision="10" />
+          <Property Name="SMAXSAL" Type="number" Precision="10" />
+          <Property Name="CATID" Type="number" Precision="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETMYAPPS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETMYAPPS">
+          <Key>
+            <PropertyRef Name="IDAPPLICATIONS" />
+            <PropertyRef Name="IDCANDIDATES" />
+            <PropertyRef Name="IDUSERS" />
+          </Key>
+          <Property Name="IDAPPLICATIONS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="APPLICATIONSTATUS" Type="varchar2" MaxLength="255" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="LICANDIDATEID" Type="varchar2" MaxLength="50" />
+          <Property Name="DTENTERED" Type="date" />
+          <Property Name="AFIRSTNAME" Type="varchar2" MaxLength="45" />
+          <Property Name="ALASTNAME" Type="varchar2" MaxLength="45" />
+          <Property Name="APROFILESUMMARY" Type="varchar2" MaxLength="500" />
+          <Property Name="UUSERNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="IDCANDIDATES" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="CCANDIDATENAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CLASTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="IDUSERS" Type="varchar2" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETSUBJECTEMAILAPPS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETSUBJECTEMAILAPPS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="SREF" Type="varchar2" MaxLength="45" />
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_GETUSERCANS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_GETUSERCANS">
+          <Key>
+            <PropertyRef Name="IDUSERS" />
+            <PropertyRef Name="IDCANDIDATES" />
+          </Key>
+          <Property Name="IDUSERS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="UUSERTYPE" Type="number" Precision="10" />
+          <Property Name="UUSERNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="UPASSWORD" Type="varchar2" MaxLength="45" />
+          <Property Name="UPASSWORDHINT" Type="varchar2" MaxLength="255" />
+          <Property Name="UFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="ULASTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="UISPRIMARY" Type="number" Precision="10" />
+          <Property Name="UCANDIDATEID" Type="varchar2" MaxLength="50" />
+          <Property Name="IDCANDIDATES" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="CCANDIDATENAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CDATEOFBIRTH" Type="date" />
+          <Property Name="CLASTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CADDRESS1" Type="varchar2" MaxLength="45" />
+          <Property Name="CADDRESS2" Type="varchar2" MaxLength="45" />
+          <Property Name="CADDRESS3" Type="varchar2" MaxLength="45" />
+          <Property Name="CTOWN" Type="varchar2" MaxLength="45" />
+          <Property Name="CCOUNTY" Type="varchar2" MaxLength="45" />
+          <Property Name="CPOSTCODE" Type="varchar2" MaxLength="45" />
+          <Property Name="CHOMEPHONE" Type="varchar2" MaxLength="45" />
+          <Property Name="CWORKPHONE" Type="varchar2" MaxLength="45" />
+          <Property Name="CDTENTERED" Type="date" />
+          <Property Name="CCOUNTRY" Type="varchar2" MaxLength="45" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_JOBPOSTEDVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_JOBPOSTEDVIEW">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="IDJOBS" Type="number" />
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="DTENTEREDDATE" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_JOBSOUTMAIL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_JOBSOUTMAIL">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="STITLE" Type="varchar2" MaxLength="255" />
+          <Property Name="EMAILADDRESS" Type="varchar2" MaxLength="500" />
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_JOBTORECRUITER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_JOBTORECRUITER">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_RECARTICLES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_RECARTICLES">
+          <Key>
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="SARTICLEID" />
+          </Key>
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SARTICLEID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="ARTICLENAME" Type="varchar2" MaxLength="100" />
+          <Property Name="ARTICLE_DATA" Type="varchar2" MaxLength="1000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_RECUSERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_RECUSERS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Name="IDJOBS" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="EMPID" Type="varchar2" MaxLength="50" />
+          <Property Name="UFIRSTNAME" Type="varchar2" MaxLength="255" />
+          <Property Name="ULASTNAME" Type="varchar2" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ROOT.VW_SUBREC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VW_SUBREC">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Name="SRECRUITERNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="MXARTICLEDATA" Type="varchar2" MaxLength="1000" />
+          <Property Name="MXIDJOBS" Type="number" />
+          <Property Name="MXARTICLENAME" Type="varchar2" MaxLength="100" />
+          <Property Name="EMPID" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="MXARTICLEID" Type="varchar2" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+              xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="joblightEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_APPJOBMAPPER" EntityType="Model.TB_APPJOBMAPPER" />
+          <EntitySet Name="TB_APPLICATIONS" EntityType="Model.TB_APPLICATIONS" />
+          <EntitySet Name="TB_APPLICATIONSTATUS" EntityType="Model.TB_APPLICATIONSTATUS" />
+          <EntitySet Name="TB_ARTICLES" EntityType="Model.TB_ARTICLES" />
+          <EntitySet Name="TB_BRANDING" EntityType="Model.TB_BRANDING" />
+          <EntitySet Name="TB_CANDIDATES" EntityType="Model.TB_CANDIDATES" />
+          <EntitySet Name="TB_CATEGORIES" EntityType="Model.TB_CATEGORIES" />
+          <EntitySet Name="TB_CATEGORYTOTERM" EntityType="Model.TB_CATEGORYTOTERM" />
+          <EntitySet Name="TB_DOCUMENTS" EntityType="Model.TB_DOCUMENTS" />
+          <EntitySet Name="TB_EMAILRESPONSE" EntityType="Model.TB_EMAILRESPONSE" />
+          <EntitySet Name="TB_EMAILRESPONSETERMS" EntityType="Model.TB_EMAILRESPONSETERMS" />
+          <EntitySet Name="TB_EMAILTEMPLATES" EntityType="Model.TB_EMAILTEMPLATES" />
+          <EntitySet Name="TB_EMAILTYPES" EntityType="Model.TB_EMAILTYPES" />
+          <EntitySet Name="TB_JOBS" EntityType="Model.TB_JOBS" />
+          <EntitySet Name="TB_JOBTABLE" EntityType="Model.TB_JOBTABLE" />
+          <EntitySet Name="TB_JOBVIEWS" EntityType="Model.TB_JOBVIEWS" />
+          <EntitySet Name="TB_RECRUITERS" EntityType="Model.TB_RECRUITERS" />
+          <EntitySet Name="TB_RECUSERMAPPER" EntityType="Model.TB_RECUSERMAPPER" />
+          <EntitySet Name="TB_SPAMREPORT" EntityType="Model.TB_SPAMREPORT" />
+          <EntitySet Name="TB_SUBSCRIPTIONS" EntityType="Model.TB_SUBSCRIPTIONS" />
+          <EntitySet Name="TB_TERMS" EntityType="Model.TB_TERMS" />
+          <EntitySet Name="TB_TERMSLIST" EntityType="Model.TB_TERMSLIST" />
+          <EntitySet Name="TB_USERS" EntityType="Model.TB_USERS" />
+          <EntitySet Name="TB_VERSION" EntityType="Model.TB_VERSION" />
+          <EntitySet Name="VW_AGGREGATEDMPAGE" EntityType="Model.VW_AGGREGATEDMPAGE" />
+          <EntitySet Name="VW_AGGREGATEDMULTI" EntityType="Model.VW_AGGREGATEDMULTI" />
+          <EntitySet Name="VW_GETALLREC" EntityType="Model.VW_GETALLREC" />
+          <EntitySet Name="VW_GETAPP" EntityType="Model.VW_GETAPP" />
+          <EntitySet Name="VW_GETDETAILSPAGES" EntityType="Model.VW_GETDETAILSPAGES" />
+          <EntitySet Name="VW_GETJOBS" EntityType="Model.VW_GETJOBS" />
+          <EntitySet Name="VW_GETJOBSARCH" EntityType="Model.VW_GETJOBSARCH" />
+          <EntitySet Name="VW_GETJOBSARCHIVED" EntityType="Model.VW_GETJOBSARCHIVED" />
+          <EntitySet Name="VW_GETJOBSSINGLE" EntityType="Model.VW_GETJOBSSINGLE" />
+          <EntitySet Name="VW_GETJOBSSINGLEARCH" EntityType="Model.VW_GETJOBSSINGLEARCH" />
+          <EntitySet Name="VW_GETMYAPPS" EntityType="Model.VW_GETMYAPPS" />
+          <EntitySet Name="VW_GETSUBJECTEMAILAPPS" EntityType="Model.VW_GETSUBJECTEMAILAPPS" />
+          <EntitySet Name="VW_GETUSERCANS" EntityType="Model.VW_GETUSERCANS" />
+          <EntitySet Name="VW_JOBPOSTEDVIEW" EntityType="Model.VW_JOBPOSTEDVIEW" />
+          <EntitySet Name="VW_JOBSOUTMAIL" EntityType="Model.VW_JOBSOUTMAIL" />
+          <EntitySet Name="VW_JOBTORECRUITER" EntityType="Model.VW_JOBTORECRUITER" />
+          <EntitySet Name="VW_RECARTICLES" EntityType="Model.VW_RECARTICLES" />
+          <EntitySet Name="VW_RECUSERS" EntityType="Model.VW_RECUSERS" />
+          <EntitySet Name="VW_SUBREC" EntityType="Model.VW_SUBREC" />
+        </EntityContainer>
+        <EntityType Name="TB_APPJOBMAPPER">
+          <Key>
+            <PropertyRef Name="IDAPPJOBMAPPER" />
+          </Key>
+          <Property Type="String" Name="IDAPPJOBMAPPER" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDAPPLICATIONS" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDJOBS" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_APPLICATIONS">
+          <Key>
+            <PropertyRef Name="IDAPPLICATIONS" />
+          </Key>
+          <Property Type="String" Name="IDAPPLICATIONS" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LICANDIDATEID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTERED" Precision="0" />
+          <Property Type="String" Name="AFIRSTNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ALASTNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ADATEOFBIRTH" Precision="0" />
+          <Property Type="String" Name="APROFILESUMMARY" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCUMENTID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AAPPLICATIONEMAIL" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AAPPLICATIONSTATUS" />
+          <Property Type="DateTime" Name="DTSTATUSCHANGED" Precision="0" />
+        </EntityType>
+        <EntityType Name="TB_APPLICATIONSTATUS">
+          <Key>
+            <PropertyRef Name="IDTB_APPLICATIONSTATUS" />
+          </Key>
+          <Property Type="Int32" Name="IDTB_APPLICATIONSTATUS" Nullable="false" />
+          <Property Type="Int32" Name="AAPPLICATIONSTATUS" />
+          <Property Type="String" Name="STERM" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_ARTICLES">
+          <Key>
+            <PropertyRef Name="SARTICLEID" />
+          </Key>
+          <Property Type="String" Name="SARTICLEID" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARTICLENAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARTICLE_DATA" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_BRANDING">
+          <Key>
+            <PropertyRef Name="IDTB_BRANDING" />
+          </Key>
+          <Property Type="Int32" Name="IDTB_BRANDING" Nullable="false" />
+          <Property Type="String" Name="KPINAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="KPIVALUE" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_CANDIDATES">
+          <Key>
+            <PropertyRef Name="IDCANDIDATES" />
+          </Key>
+          <Property Type="String" Name="IDCANDIDATES" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CCANDIDATENAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CLASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS1" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS2" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS3" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CTOWN" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CCOUNTY" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CPOSTCODE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHOMEPHONE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CWORKPHONE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CDTENTERED" Precision="0" />
+          <Property Type="String" Name="CCOUNTRY" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CDATEOFBIRTH" Precision="0" />
+        </EntityType>
+        <EntityType Name="TB_CATEGORIES">
+          <Key>
+            <PropertyRef Name="CATID" />
+          </Key>
+          <Property Type="Int32" Name="CATID" Nullable="false" />
+          <Property Type="String" Name="SCATEGORY" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_CATEGORYTOTERM">
+          <Key>
+            <PropertyRef Name="IDCATEGORYTOTERM" />
+          </Key>
+          <Property Type="Int32" Name="IDCATEGORYTOTERM" Nullable="false" />
+          <Property Type="Int32" Name="CATID" />
+          <Property Type="Int32" Name="TERMID" />
+        </EntityType>
+        <EntityType Name="TB_DOCUMENTS">
+          <Key>
+            <PropertyRef Name="DOCUMENTID" />
+          </Key>
+          <Property Type="String" Name="DOCUMENTID" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCUMENTNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOC_DATA" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOC_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_EMAILRESPONSE">
+          <Key>
+            <PropertyRef Name="IDEMAILRESPONSE" />
+          </Key>
+          <Property Type="String" Name="IDEMAILRESPONSE" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RSTATUS" />
+          <Property Type="DateTime" Name="RDTSENT" Precision="6" />
+          <Property Type="Int32" Name="REMAILTYPE" />
+          <Property Type="String" Name="REMAILADDRESS" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_EMAILRESPONSETERMS">
+          <Key>
+            <PropertyRef Name="IDEMAILRESPONSETERMS" />
+          </Key>
+          <Property Type="Int32" Name="IDEMAILRESPONSETERMS" Nullable="false" />
+          <Property Type="Int32" Name="IDEMAILRESPONSE" />
+          <Property Type="Int32" Name="CATID" />
+          <Property Type="Int32" Name="TERMID" />
+        </EntityType>
+        <EntityType Name="TB_EMAILTEMPLATES">
+          <Key>
+            <PropertyRef Name="IDEMAILTEMPLATES" />
+          </Key>
+          <Property Type="Int32" Name="IDEMAILTEMPLATES" Nullable="false" />
+          <Property Type="String" Name="EHEADER" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EFOOTER" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ETEMPLATECHKID" MaxLength="45" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_EMAILTYPES">
+          <Key>
+            <PropertyRef Name="REMAILTYPE" />
+          </Key>
+          <Property Type="Int32" Name="REMAILTYPE" Nullable="false" />
+          <Property Type="String" Name="STEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_JOBS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="Int32" Name="SMAXSAL" />
+          <Property Type="String" Name="SREF" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SJOBSTARTDATE" Precision="0" />
+          <Property Type="DateTime" Name="SJOBENDDATE" Precision="0" />
+        </EntityType>
+        <EntityType Name="TB_JOBTABLE">
+          <Key>
+            <PropertyRef Name="JTABID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CATID" />
+          <Property Type="Int32" Name="TERMID" />
+          <Property Type="String" Name="EMPID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="JTABID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_JOBVIEWS">
+          <Key>
+            <PropertyRef Name="IDJOBVIEWS" />
+          </Key>
+          <Property Type="String" Name="IDJOBVIEWS" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTERED" Precision="0" />
+          <Property Type="Int32" Name="JVIEWTYPE" />
+        </EntityType>
+        <EntityType Name="TB_RECRUITERS">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SADDRESS1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SADDRESS2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SADDRESS3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STOWN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCOUNTY" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCOUNTRY" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SPOSTCODE" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEMAILADDRESS" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SWEBSITE" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCOMPLETEDESC" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SDTENTERED" Precision="0" />
+          <Property Type="Int32" Name="SENTEREDBYID" />
+          <Property Type="Int32" Name="SISFEATURED" />
+          <Property Type="String" Name="SARTICLEID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SISACTIVE" />
+        </EntityType>
+        <EntityType Name="TB_RECUSERMAPPER">
+          <Key>
+            <PropertyRef Name="IDUSERMAPPER" />
+          </Key>
+          <Property Type="Int32" Name="IDUSERMAPPER" Nullable="false" />
+          <Property Type="String" Name="EMPID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDUSERS" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_SPAMREPORT">
+          <Key>
+            <PropertyRef Name="IDTB_SPAMREPORT" />
+          </Key>
+          <Property Type="String" Name="IDTB_SPAMREPORT" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SPAMINDEX" />
+          <Property Type="String" Name="SPAMREASON" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTERED" Precision="0" />
+          <Property Type="String" Name="IPUSER" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERAGENTS" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JOBID" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_SUBSCRIPTIONS">
+          <Key>
+            <PropertyRef Name="IDTB_SUBSCRIPTIONS" />
+          </Key>
+          <Property Type="String" Name="IDTB_SUBSCRIPTIONS" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMAILADDRESS" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CATID" />
+          <Property Type="Int32" Name="TERMID" />
+        </EntityType>
+        <EntityType Name="TB_TERMS">
+          <Key>
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Type="Int32" Name="TERMID" Nullable="false" />
+          <Property Type="String" Name="STERM" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MINRANGE" />
+          <Property Type="Int32" Name="MAXRANGE" />
+          <Property Type="Int32" Name="LIPARENT" />
+        </EntityType>
+        <EntityType Name="TB_TERMSLIST">
+          <Key>
+            <PropertyRef Name="IDTERMSLIST" />
+          </Key>
+          <Property Type="Int32" Name="IDTERMSLIST" Nullable="false" />
+          <Property Type="Int32" Name="TERMID" />
+          <Property Type="Int32" Name="TERMLEVEL" />
+        </EntityType>
+        <EntityType Name="TB_USERS">
+          <Key>
+            <PropertyRef Name="IDUSERS" />
+          </Key>
+          <Property Type="String" Name="IDUSERS" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UUSERTYPE" />
+          <Property Type="String" Name="UUSERNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPASSWORD" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPASSWORDHINT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ULASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UISPRIMARY" />
+          <Property Type="String" Name="UCANDIDATEID" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UACTIVATION" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_VERSION">
+          <Key>
+            <PropertyRef Name="IDVERSION" />
+          </Key>
+          <Property Type="Int32" Name="IDVERSION" Nullable="false" />
+          <Property Type="String" Name="VERSIONNUMBER" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CHECKOUT" />
+        </EntityType>
+        <EntityType Name="VW_AGGREGATEDMPAGE">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="Decimal" Name="APPLICATIONVOLUME" Precision="38" Scale="0" />
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="String" Name="EMPLOYEEID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMAXSAL" />
+        </EntityType>
+        <EntityType Name="VW_AGGREGATEDMULTI">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Type="Decimal" Name="APPLICATIONVOLUME" Precision="38" Scale="0" />
+          <Property Type="String" Name="STERM" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCATEGORY" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="String" Name="EMPLOYEEID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TERMID" Nullable="false" />
+          <Property Type="Int32" Name="SMAXSAL" />
+        </EntityType>
+        <EntityType Name="VW_GETALLREC">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCOMPLETEDESC" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MXARTICLEDATA" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SWEBSITE" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEMAILADDRESS" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="MXIDJOBS" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="VW_GETAPP">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="IDAPPLICATIONS" />
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPLETEURL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="Int32" Name="SMAXSAL" />
+          <Property Type="String" Name="SREF" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SJOBSTARTDATE" Precision="0" />
+          <Property Type="DateTime" Name="SJOBENDDATE" Precision="0" />
+          <Property Type="String" Name="IDAPPLICATIONS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LICANDIDATEID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTERED" Precision="0" />
+          <Property Type="String" Name="AFIRSTNAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ALASTNAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ADATEOFBIRTH" Precision="0" />
+          <Property Type="String" Name="APROFILESUMMARY" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DOCUMENTID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AAPPLICATIONEMAIL" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_GETDETAILSPAGES">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="MINRANGE" />
+          <Property Type="Int32" Name="MAXRANGE" />
+          <Property Type="Int32" Name="TERMID" Nullable="false" />
+          <Property Type="Int32" Name="CATID" />
+          <Property Type="String" Name="STERM" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_GETJOBS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCATEGORY" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STERM" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TERMID" Nullable="false" />
+          <Property Type="DateTime" Name="SJOBSTARTDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="Int32" Name="SMAXSAL" />
+          <Property Type="String" Name="EMPID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SJOBENDDATE" Precision="0" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+        </EntityType>
+        <EntityType Name="VW_GETJOBSARCH">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SJOBENDDATE" Precision="0" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="String" Name="EMPID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMAXSAL" />
+        </EntityType>
+        <EntityType Name="VW_GETJOBSARCHIVED">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPLOYEEID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="String" Name="EMPLOYEEID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TERMID" />
+          <Property Type="Int32" Name="SMAXSAL" />
+        </EntityType>
+        <EntityType Name="VW_GETJOBSSINGLE">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="TERMID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SCATEGORY" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STERM" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TERMID" Nullable="false" />
+          <Property Type="DateTime" Name="SJOBSTARTDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="Int32" Name="SMAXSAL" />
+          <Property Type="String" Name="EMPID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SJOBENDDATE" Precision="0" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="Int32" Name="CATID" />
+        </EntityType>
+        <EntityType Name="VW_GETJOBSSINGLEARCH">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPLOYEEID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SSHORTDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SFREETEXT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SDESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+          <Property Type="String" Name="SSALARYTEXT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SMINSAL" />
+          <Property Type="String" Name="EMPLOYEEID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TERMID" />
+          <Property Type="Int32" Name="SMAXSAL" />
+          <Property Type="Int32" Name="CATID" />
+        </EntityType>
+        <EntityType Name="VW_GETMYAPPS">
+          <Key>
+            <PropertyRef Name="IDAPPLICATIONS" />
+            <PropertyRef Name="IDCANDIDATES" />
+            <PropertyRef Name="IDUSERS" />
+          </Key>
+          <Property Type="String" Name="IDAPPLICATIONS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="APPLICATIONSTATUS" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LICANDIDATEID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTERED" Precision="0" />
+          <Property Type="String" Name="AFIRSTNAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ALASTNAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="APROFILESUMMARY" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UUSERNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDCANDIDATES" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CCANDIDATENAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CLASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDUSERS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_GETSUBJECTEMAILAPPS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="String" Name="SREF" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_GETUSERCANS">
+          <Key>
+            <PropertyRef Name="IDUSERS" />
+            <PropertyRef Name="IDCANDIDATES" />
+          </Key>
+          <Property Type="String" Name="IDUSERS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UUSERTYPE" />
+          <Property Type="String" Name="UUSERNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPASSWORD" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UPASSWORDHINT" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ULASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UISPRIMARY" />
+          <Property Type="String" Name="UCANDIDATEID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDCANDIDATES" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CCANDIDATENAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CDATEOFBIRTH" Precision="0" />
+          <Property Type="String" Name="CLASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS1" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS2" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CADDRESS3" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CTOWN" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CCOUNTY" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CPOSTCODE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHOMEPHONE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CWORKPHONE" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CDTENTERED" Precision="0" />
+          <Property Type="String" Name="CCOUNTRY" MaxLength="45" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_JOBPOSTEDVIEW">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="Decimal" Name="IDJOBS" Precision="38" Scale="0" />
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DTENTEREDDATE" Precision="0" />
+        </EntityType>
+        <EntityType Name="VW_JOBSOUTMAIL">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="String" Name="STITLE" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMAILADDRESS" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_JOBTORECRUITER">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_RECARTICLES">
+          <Key>
+            <PropertyRef Name="EMPID" />
+            <PropertyRef Name="SARTICLEID" />
+          </Key>
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SARTICLEID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARTICLENAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARTICLE_DATA" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_RECUSERS">
+          <Key>
+            <PropertyRef Name="IDJOBS" />
+          </Key>
+          <Property Type="String" Name="IDJOBS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UFIRSTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ULASTNAME" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VW_SUBREC">
+          <Key>
+            <PropertyRef Name="EMPID" />
+          </Key>
+          <Property Type="String" Name="SRECRUITERNAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MXARTICLEDATA" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="MXIDJOBS" Precision="38" Scale="0" />
+          <Property Type="String" Name="MXARTICLENAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EMPID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MXARTICLEID" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="joblightEntities">
+          <EntitySetMapping Name="TB_APPJOBMAPPER">
+            <EntityTypeMapping TypeName="Model.TB_APPJOBMAPPER">
+              <MappingFragment StoreEntitySet="TB_APPJOBMAPPER">
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+                <ScalarProperty Name="IDAPPLICATIONS" ColumnName="IDAPPLICATIONS" />
+                <ScalarProperty Name="IDAPPJOBMAPPER" ColumnName="IDAPPJOBMAPPER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_APPLICATIONS">
+            <EntityTypeMapping TypeName="Model.TB_APPLICATIONS">
+              <MappingFragment StoreEntitySet="TB_APPLICATIONS">
+                <ScalarProperty Name="DTSTATUSCHANGED" ColumnName="DTSTATUSCHANGED" />
+                <ScalarProperty Name="AAPPLICATIONSTATUS" ColumnName="AAPPLICATIONSTATUS" />
+                <ScalarProperty Name="AAPPLICATIONEMAIL" ColumnName="AAPPLICATIONEMAIL" />
+                <ScalarProperty Name="DOCUMENTID" ColumnName="DOCUMENTID" />
+                <ScalarProperty Name="APROFILESUMMARY" ColumnName="APROFILESUMMARY" />
+                <ScalarProperty Name="ADATEOFBIRTH" ColumnName="ADATEOFBIRTH" />
+                <ScalarProperty Name="ALASTNAME" ColumnName="ALASTNAME" />
+                <ScalarProperty Name="AFIRSTNAME" ColumnName="AFIRSTNAME" />
+                <ScalarProperty Name="DTENTERED" ColumnName="DTENTERED" />
+                <ScalarProperty Name="LICANDIDATEID" ColumnName="LICANDIDATEID" />
+                <ScalarProperty Name="IDAPPLICATIONS" ColumnName="IDAPPLICATIONS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_APPLICATIONSTATUS">
+            <EntityTypeMapping TypeName="Model.TB_APPLICATIONSTATUS">
+              <MappingFragment StoreEntitySet="TB_APPLICATIONSTATUS">
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="AAPPLICATIONSTATUS" ColumnName="AAPPLICATIONSTATUS" />
+                <ScalarProperty Name="IDTB_APPLICATIONSTATUS" ColumnName="IDTB_APPLICATIONSTATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_ARTICLES">
+            <EntityTypeMapping TypeName="Model.TB_ARTICLES">
+              <MappingFragment StoreEntitySet="TB_ARTICLES">
+                <ScalarProperty Name="ARTICLE_DATA" ColumnName="ARTICLE_DATA" />
+                <ScalarProperty Name="ARTICLENAME" ColumnName="ARTICLENAME" />
+                <ScalarProperty Name="SARTICLEID" ColumnName="SARTICLEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_BRANDING">
+            <EntityTypeMapping TypeName="Model.TB_BRANDING">
+              <MappingFragment StoreEntitySet="TB_BRANDING">
+                <ScalarProperty Name="KPIVALUE" ColumnName="KPIVALUE" />
+                <ScalarProperty Name="KPINAME" ColumnName="KPINAME" />
+                <ScalarProperty Name="IDTB_BRANDING" ColumnName="IDTB_BRANDING" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_CANDIDATES">
+            <EntityTypeMapping TypeName="Model.TB_CANDIDATES">
+              <MappingFragment StoreEntitySet="TB_CANDIDATES">
+                <ScalarProperty Name="CDATEOFBIRTH" ColumnName="CDATEOFBIRTH" />
+                <ScalarProperty Name="CCOUNTRY" ColumnName="CCOUNTRY" />
+                <ScalarProperty Name="CDTENTERED" ColumnName="CDTENTERED" />
+                <ScalarProperty Name="CWORKPHONE" ColumnName="CWORKPHONE" />
+                <ScalarProperty Name="CHOMEPHONE" ColumnName="CHOMEPHONE" />
+                <ScalarProperty Name="CPOSTCODE" ColumnName="CPOSTCODE" />
+                <ScalarProperty Name="CCOUNTY" ColumnName="CCOUNTY" />
+                <ScalarProperty Name="CTOWN" ColumnName="CTOWN" />
+                <ScalarProperty Name="CADDRESS3" ColumnName="CADDRESS3" />
+                <ScalarProperty Name="CADDRESS2" ColumnName="CADDRESS2" />
+                <ScalarProperty Name="CADDRESS1" ColumnName="CADDRESS1" />
+                <ScalarProperty Name="CLASTNAME" ColumnName="CLASTNAME" />
+                <ScalarProperty Name="CFIRSTNAME" ColumnName="CFIRSTNAME" />
+                <ScalarProperty Name="CCANDIDATENAME" ColumnName="CCANDIDATENAME" />
+                <ScalarProperty Name="IDCANDIDATES" ColumnName="IDCANDIDATES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_CATEGORIES">
+            <EntityTypeMapping TypeName="Model.TB_CATEGORIES">
+              <MappingFragment StoreEntitySet="TB_CATEGORIES">
+                <ScalarProperty Name="SCATEGORY" ColumnName="SCATEGORY" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_CATEGORYTOTERM">
+            <EntityTypeMapping TypeName="Model.TB_CATEGORYTOTERM">
+              <MappingFragment StoreEntitySet="TB_CATEGORYTOTERM">
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="IDCATEGORYTOTERM" ColumnName="IDCATEGORYTOTERM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_DOCUMENTS">
+            <EntityTypeMapping TypeName="Model.TB_DOCUMENTS">
+              <MappingFragment StoreEntitySet="TB_DOCUMENTS">
+                <ScalarProperty Name="DOC_URL" ColumnName="DOC_URL" />
+                <ScalarProperty Name="DOC_DATA" ColumnName="DOC_DATA" />
+                <ScalarProperty Name="DOCUMENTNAME" ColumnName="DOCUMENTNAME" />
+                <ScalarProperty Name="DOCUMENTID" ColumnName="DOCUMENTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_EMAILRESPONSE">
+            <EntityTypeMapping TypeName="Model.TB_EMAILRESPONSE">
+              <MappingFragment StoreEntitySet="TB_EMAILRESPONSE">
+                <ScalarProperty Name="REMAILADDRESS" ColumnName="REMAILADDRESS" />
+                <ScalarProperty Name="REMAILTYPE" ColumnName="REMAILTYPE" />
+                <ScalarProperty Name="RDTSENT" ColumnName="RDTSENT" />
+                <ScalarProperty Name="RSTATUS" ColumnName="RSTATUS" />
+                <ScalarProperty Name="IDEMAILRESPONSE" ColumnName="IDEMAILRESPONSE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_EMAILRESPONSETERMS">
+            <EntityTypeMapping TypeName="Model.TB_EMAILRESPONSETERMS">
+              <MappingFragment StoreEntitySet="TB_EMAILRESPONSETERMS">
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="IDEMAILRESPONSE" ColumnName="IDEMAILRESPONSE" />
+                <ScalarProperty Name="IDEMAILRESPONSETERMS" ColumnName="IDEMAILRESPONSETERMS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_EMAILTEMPLATES">
+            <EntityTypeMapping TypeName="Model.TB_EMAILTEMPLATES">
+              <MappingFragment StoreEntitySet="TB_EMAILTEMPLATES">
+                <ScalarProperty Name="ETEMPLATECHKID" ColumnName="ETEMPLATECHKID" />
+                <ScalarProperty Name="EFOOTER" ColumnName="EFOOTER" />
+                <ScalarProperty Name="EDESCRIPTION" ColumnName="EDESCRIPTION" />
+                <ScalarProperty Name="EHEADER" ColumnName="EHEADER" />
+                <ScalarProperty Name="IDEMAILTEMPLATES" ColumnName="IDEMAILTEMPLATES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_EMAILTYPES">
+            <EntityTypeMapping TypeName="Model.TB_EMAILTYPES">
+              <MappingFragment StoreEntitySet="TB_EMAILTYPES">
+                <ScalarProperty Name="STEXT" ColumnName="STEXT" />
+                <ScalarProperty Name="REMAILTYPE" ColumnName="REMAILTYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_JOBS">
+            <EntityTypeMapping TypeName="Model.TB_JOBS">
+              <MappingFragment StoreEntitySet="TB_JOBS">
+                <ScalarProperty Name="SJOBENDDATE" ColumnName="SJOBENDDATE" />
+                <ScalarProperty Name="SJOBSTARTDATE" ColumnName="SJOBSTARTDATE" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SREF" ColumnName="SREF" />
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_JOBTABLE">
+            <EntityTypeMapping TypeName="Model.TB_JOBTABLE">
+              <MappingFragment StoreEntitySet="TB_JOBTABLE">
+                <ScalarProperty Name="JTABID" ColumnName="JTABID" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_JOBVIEWS">
+            <EntityTypeMapping TypeName="Model.TB_JOBVIEWS">
+              <MappingFragment StoreEntitySet="TB_JOBVIEWS">
+                <ScalarProperty Name="JVIEWTYPE" ColumnName="JVIEWTYPE" />
+                <ScalarProperty Name="DTENTERED" ColumnName="DTENTERED" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="IDJOBVIEWS" ColumnName="IDJOBVIEWS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_RECRUITERS">
+            <EntityTypeMapping TypeName="Model.TB_RECRUITERS">
+              <MappingFragment StoreEntitySet="TB_RECRUITERS">
+                <ScalarProperty Name="SISACTIVE" ColumnName="SISACTIVE" />
+                <ScalarProperty Name="SARTICLEID" ColumnName="SARTICLEID" />
+                <ScalarProperty Name="SISFEATURED" ColumnName="SISFEATURED" />
+                <ScalarProperty Name="SENTEREDBYID" ColumnName="SENTEREDBYID" />
+                <ScalarProperty Name="SDTENTERED" ColumnName="SDTENTERED" />
+                <ScalarProperty Name="SCOMPLETEDESC" ColumnName="SCOMPLETEDESC" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SWEBSITE" ColumnName="SWEBSITE" />
+                <ScalarProperty Name="SEMAILADDRESS" ColumnName="SEMAILADDRESS" />
+                <ScalarProperty Name="SPOSTCODE" ColumnName="SPOSTCODE" />
+                <ScalarProperty Name="SCOUNTRY" ColumnName="SCOUNTRY" />
+                <ScalarProperty Name="SCOUNTY" ColumnName="SCOUNTY" />
+                <ScalarProperty Name="STOWN" ColumnName="STOWN" />
+                <ScalarProperty Name="SADDRESS3" ColumnName="SADDRESS3" />
+                <ScalarProperty Name="SADDRESS2" ColumnName="SADDRESS2" />
+                <ScalarProperty Name="SADDRESS1" ColumnName="SADDRESS1" />
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_RECUSERMAPPER">
+            <EntityTypeMapping TypeName="Model.TB_RECUSERMAPPER">
+              <MappingFragment StoreEntitySet="TB_RECUSERMAPPER">
+                <ScalarProperty Name="IDUSERS" ColumnName="IDUSERS" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="IDUSERMAPPER" ColumnName="IDUSERMAPPER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_SPAMREPORT">
+            <EntityTypeMapping TypeName="Model.TB_SPAMREPORT">
+              <MappingFragment StoreEntitySet="TB_SPAMREPORT">
+                <ScalarProperty Name="JOBID" ColumnName="JOBID" />
+                <ScalarProperty Name="USERAGENTS" ColumnName="USERAGENTS" />
+                <ScalarProperty Name="IPUSER" ColumnName="IPUSER" />
+                <ScalarProperty Name="DTENTERED" ColumnName="DTENTERED" />
+                <ScalarProperty Name="SPAMREASON" ColumnName="SPAMREASON" />
+                <ScalarProperty Name="SPAMINDEX" ColumnName="SPAMINDEX" />
+                <ScalarProperty Name="IDTB_SPAMREPORT" ColumnName="IDTB_SPAMREPORT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_SUBSCRIPTIONS">
+            <EntityTypeMapping TypeName="Model.TB_SUBSCRIPTIONS">
+              <MappingFragment StoreEntitySet="TB_SUBSCRIPTIONS">
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="EMAILADDRESS" ColumnName="EMAILADDRESS" />
+                <ScalarProperty Name="IDTB_SUBSCRIPTIONS" ColumnName="IDTB_SUBSCRIPTIONS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TERMS">
+            <EntityTypeMapping TypeName="Model.TB_TERMS">
+              <MappingFragment StoreEntitySet="TB_TERMS">
+                <ScalarProperty Name="LIPARENT" ColumnName="LIPARENT" />
+                <ScalarProperty Name="MAXRANGE" ColumnName="MAXRANGE" />
+                <ScalarProperty Name="MINRANGE" ColumnName="MINRANGE" />
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TERMSLIST">
+            <EntityTypeMapping TypeName="Model.TB_TERMSLIST">
+              <MappingFragment StoreEntitySet="TB_TERMSLIST">
+                <ScalarProperty Name="TERMLEVEL" ColumnName="TERMLEVEL" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="IDTERMSLIST" ColumnName="IDTERMSLIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_USERS">
+            <EntityTypeMapping TypeName="Model.TB_USERS">
+              <MappingFragment StoreEntitySet="TB_USERS">
+                <ScalarProperty Name="UACTIVATION" ColumnName="UACTIVATION" />
+                <ScalarProperty Name="UCANDIDATEID" ColumnName="UCANDIDATEID" />
+                <ScalarProperty Name="UISPRIMARY" ColumnName="UISPRIMARY" />
+                <ScalarProperty Name="ULASTNAME" ColumnName="ULASTNAME" />
+                <ScalarProperty Name="UFIRSTNAME" ColumnName="UFIRSTNAME" />
+                <ScalarProperty Name="UPASSWORDHINT" ColumnName="UPASSWORDHINT" />
+                <ScalarProperty Name="UPASSWORD" ColumnName="UPASSWORD" />
+                <ScalarProperty Name="UUSERNAME" ColumnName="UUSERNAME" />
+                <ScalarProperty Name="UUSERTYPE" ColumnName="UUSERTYPE" />
+                <ScalarProperty Name="IDUSERS" ColumnName="IDUSERS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_VERSION">
+            <EntityTypeMapping TypeName="Model.TB_VERSION">
+              <MappingFragment StoreEntitySet="TB_VERSION">
+                <ScalarProperty Name="CHECKOUT" ColumnName="CHECKOUT" />
+                <ScalarProperty Name="VERSIONNUMBER" ColumnName="VERSIONNUMBER" />
+                <ScalarProperty Name="IDVERSION" ColumnName="IDVERSION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_AGGREGATEDMPAGE">
+            <EntityTypeMapping TypeName="Model.VW_AGGREGATEDMPAGE">
+              <MappingFragment StoreEntitySet="VW_AGGREGATEDMPAGE">
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="EMPLOYEEID" ColumnName="EMPLOYEEID" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+                <ScalarProperty Name="APPLICATIONVOLUME" ColumnName="APPLICATIONVOLUME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_AGGREGATEDMULTI">
+            <EntityTypeMapping TypeName="Model.VW_AGGREGATEDMULTI">
+              <MappingFragment StoreEntitySet="VW_AGGREGATEDMULTI">
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="EMPLOYEEID" ColumnName="EMPLOYEEID" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="SCATEGORY" ColumnName="SCATEGORY" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="APPLICATIONVOLUME" ColumnName="APPLICATIONVOLUME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETALLREC">
+            <EntityTypeMapping TypeName="Model.VW_GETALLREC">
+              <MappingFragment StoreEntitySet="VW_GETALLREC">
+                <ScalarProperty Name="MXIDJOBS" ColumnName="MXIDJOBS" />
+                <ScalarProperty Name="SEMAILADDRESS" ColumnName="SEMAILADDRESS" />
+                <ScalarProperty Name="SWEBSITE" ColumnName="SWEBSITE" />
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+                <ScalarProperty Name="MXARTICLEDATA" ColumnName="MXARTICLEDATA" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SCOMPLETEDESC" ColumnName="SCOMPLETEDESC" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETAPP">
+            <EntityTypeMapping TypeName="Model.VW_GETAPP">
+              <MappingFragment StoreEntitySet="VW_GETAPP">
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="AAPPLICATIONEMAIL" ColumnName="AAPPLICATIONEMAIL" />
+                <ScalarProperty Name="DOCUMENTID" ColumnName="DOCUMENTID" />
+                <ScalarProperty Name="APROFILESUMMARY" ColumnName="APROFILESUMMARY" />
+                <ScalarProperty Name="ADATEOFBIRTH" ColumnName="ADATEOFBIRTH" />
+                <ScalarProperty Name="ALASTNAME" ColumnName="ALASTNAME" />
+                <ScalarProperty Name="AFIRSTNAME" ColumnName="AFIRSTNAME" />
+                <ScalarProperty Name="DTENTERED" ColumnName="DTENTERED" />
+                <ScalarProperty Name="LICANDIDATEID" ColumnName="LICANDIDATEID" />
+                <ScalarProperty Name="IDAPPLICATIONS" ColumnName="IDAPPLICATIONS" />
+                <ScalarProperty Name="SJOBENDDATE" ColumnName="SJOBENDDATE" />
+                <ScalarProperty Name="SJOBSTARTDATE" ColumnName="SJOBSTARTDATE" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SREF" ColumnName="SREF" />
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="COMPLETEURL" ColumnName="COMPLETEURL" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETDETAILSPAGES">
+            <EntityTypeMapping TypeName="Model.VW_GETDETAILSPAGES">
+              <MappingFragment StoreEntitySet="VW_GETDETAILSPAGES">
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="MAXRANGE" ColumnName="MAXRANGE" />
+                <ScalarProperty Name="MINRANGE" ColumnName="MINRANGE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETJOBS">
+            <EntityTypeMapping TypeName="Model.VW_GETJOBS">
+              <MappingFragment StoreEntitySet="VW_GETJOBS">
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SJOBENDDATE" ColumnName="SJOBENDDATE" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="SJOBSTARTDATE" ColumnName="SJOBSTARTDATE" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="SCATEGORY" ColumnName="SCATEGORY" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETJOBSARCH">
+            <EntityTypeMapping TypeName="Model.VW_GETJOBSARCH">
+              <MappingFragment StoreEntitySet="VW_GETJOBSARCH">
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="SJOBENDDATE" ColumnName="SJOBENDDATE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETJOBSARCHIVED">
+            <EntityTypeMapping TypeName="Model.VW_GETJOBSARCHIVED">
+              <MappingFragment StoreEntitySet="VW_GETJOBSARCHIVED">
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="EMPLOYEEID" ColumnName="EMPLOYEEID" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETJOBSSINGLE">
+            <EntityTypeMapping TypeName="Model.VW_GETJOBSSINGLE">
+              <MappingFragment StoreEntitySet="VW_GETJOBSSINGLE">
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SJOBENDDATE" ColumnName="SJOBENDDATE" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="SJOBSTARTDATE" ColumnName="SJOBSTARTDATE" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="STERM" ColumnName="STERM" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="SCATEGORY" ColumnName="SCATEGORY" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETJOBSSINGLEARCH">
+            <EntityTypeMapping TypeName="Model.VW_GETJOBSSINGLEARCH">
+              <MappingFragment StoreEntitySet="VW_GETJOBSSINGLEARCH">
+                <ScalarProperty Name="CATID" ColumnName="CATID" />
+                <ScalarProperty Name="SMAXSAL" ColumnName="SMAXSAL" />
+                <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+                <ScalarProperty Name="EMPLOYEEID" ColumnName="EMPLOYEEID" />
+                <ScalarProperty Name="SMINSAL" ColumnName="SMINSAL" />
+                <ScalarProperty Name="SSALARYTEXT" ColumnName="SSALARYTEXT" />
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="SDESCRIPTION" ColumnName="SDESCRIPTION" />
+                <ScalarProperty Name="SFREETEXT" ColumnName="SFREETEXT" />
+                <ScalarProperty Name="SSHORTDESCRIPTION" ColumnName="SSHORTDESCRIPTION" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETMYAPPS">
+            <EntityTypeMapping TypeName="Model.VW_GETMYAPPS">
+              <MappingFragment StoreEntitySet="VW_GETMYAPPS">
+                <ScalarProperty Name="IDUSERS" ColumnName="IDUSERS" />
+                <ScalarProperty Name="CLASTNAME" ColumnName="CLASTNAME" />
+                <ScalarProperty Name="CFIRSTNAME" ColumnName="CFIRSTNAME" />
+                <ScalarProperty Name="CCANDIDATENAME" ColumnName="CCANDIDATENAME" />
+                <ScalarProperty Name="IDCANDIDATES" ColumnName="IDCANDIDATES" />
+                <ScalarProperty Name="UUSERNAME" ColumnName="UUSERNAME" />
+                <ScalarProperty Name="APROFILESUMMARY" ColumnName="APROFILESUMMARY" />
+                <ScalarProperty Name="ALASTNAME" ColumnName="ALASTNAME" />
+                <ScalarProperty Name="AFIRSTNAME" ColumnName="AFIRSTNAME" />
+                <ScalarProperty Name="DTENTERED" ColumnName="DTENTERED" />
+                <ScalarProperty Name="LICANDIDATEID" ColumnName="LICANDIDATEID" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="APPLICATIONSTATUS" ColumnName="APPLICATIONSTATUS" />
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+                <ScalarProperty Name="IDAPPLICATIONS" ColumnName="IDAPPLICATIONS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETSUBJECTEMAILAPPS">
+            <EntityTypeMapping TypeName="Model.VW_GETSUBJECTEMAILAPPS">
+              <MappingFragment StoreEntitySet="VW_GETSUBJECTEMAILAPPS">
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+                <ScalarProperty Name="SREF" ColumnName="SREF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_GETUSERCANS">
+            <EntityTypeMapping TypeName="Model.VW_GETUSERCANS">
+              <MappingFragment StoreEntitySet="VW_GETUSERCANS">
+                <ScalarProperty Name="CCOUNTRY" ColumnName="CCOUNTRY" />
+                <ScalarProperty Name="CDTENTERED" ColumnName="CDTENTERED" />
+                <ScalarProperty Name="CWORKPHONE" ColumnName="CWORKPHONE" />
+                <ScalarProperty Name="CHOMEPHONE" ColumnName="CHOMEPHONE" />
+                <ScalarProperty Name="CPOSTCODE" ColumnName="CPOSTCODE" />
+                <ScalarProperty Name="CCOUNTY" ColumnName="CCOUNTY" />
+                <ScalarProperty Name="CTOWN" ColumnName="CTOWN" />
+                <ScalarProperty Name="CADDRESS3" ColumnName="CADDRESS3" />
+                <ScalarProperty Name="CADDRESS2" ColumnName="CADDRESS2" />
+                <ScalarProperty Name="CADDRESS1" ColumnName="CADDRESS1" />
+                <ScalarProperty Name="CLASTNAME" ColumnName="CLASTNAME" />
+                <ScalarProperty Name="CDATEOFBIRTH" ColumnName="CDATEOFBIRTH" />
+                <ScalarProperty Name="CFIRSTNAME" ColumnName="CFIRSTNAME" />
+                <ScalarProperty Name="CCANDIDATENAME" ColumnName="CCANDIDATENAME" />
+                <ScalarProperty Name="IDCANDIDATES" ColumnName="IDCANDIDATES" />
+                <ScalarProperty Name="UCANDIDATEID" ColumnName="UCANDIDATEID" />
+                <ScalarProperty Name="UISPRIMARY" ColumnName="UISPRIMARY" />
+                <ScalarProperty Name="ULASTNAME" ColumnName="ULASTNAME" />
+                <ScalarProperty Name="UFIRSTNAME" ColumnName="UFIRSTNAME" />
+                <ScalarProperty Name="UPASSWORDHINT" ColumnName="UPASSWORDHINT" />
+                <ScalarProperty Name="UPASSWORD" ColumnName="UPASSWORD" />
+                <ScalarProperty Name="UUSERNAME" ColumnName="UUSERNAME" />
+                <ScalarProperty Name="UUSERTYPE" ColumnName="UUSERTYPE" />
+                <ScalarProperty Name="IDUSERS" ColumnName="IDUSERS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_JOBPOSTEDVIEW">
+            <EntityTypeMapping TypeName="Model.VW_JOBPOSTEDVIEW">
+              <MappingFragment StoreEntitySet="VW_JOBPOSTEDVIEW">
+                <ScalarProperty Name="DTENTEREDDATE" ColumnName="DTENTEREDDATE" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_JOBSOUTMAIL">
+            <EntityTypeMapping TypeName="Model.VW_JOBSOUTMAIL">
+              <MappingFragment StoreEntitySet="VW_JOBSOUTMAIL">
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+                <ScalarProperty Name="EMAILADDRESS" ColumnName="EMAILADDRESS" />
+                <ScalarProperty Name="STITLE" ColumnName="STITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_JOBTORECRUITER">
+            <EntityTypeMapping TypeName="Model.VW_JOBTORECRUITER">
+              <MappingFragment StoreEntitySet="VW_JOBTORECRUITER">
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_RECARTICLES">
+            <EntityTypeMapping TypeName="Model.VW_RECARTICLES">
+              <MappingFragment StoreEntitySet="VW_RECARTICLES">
+                <ScalarProperty Name="ARTICLE_DATA" ColumnName="ARTICLE_DATA" />
+                <ScalarProperty Name="ARTICLENAME" ColumnName="ARTICLENAME" />
+                <ScalarProperty Name="SARTICLEID" ColumnName="SARTICLEID" />
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_RECUSERS">
+            <EntityTypeMapping TypeName="Model.VW_RECUSERS">
+              <MappingFragment StoreEntitySet="VW_RECUSERS">
+                <ScalarProperty Name="ULASTNAME" ColumnName="ULASTNAME" />
+                <ScalarProperty Name="UFIRSTNAME" ColumnName="UFIRSTNAME" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="IDJOBS" ColumnName="IDJOBS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_SUBREC">
+            <EntityTypeMapping TypeName="Model.VW_SUBREC">
+              <MappingFragment StoreEntitySet="VW_SUBREC">
+                <ScalarProperty Name="MXARTICLEID" ColumnName="MXARTICLEID" />
+                <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+                <ScalarProperty Name="MXARTICLENAME" ColumnName="MXARTICLENAME" />
+                <ScalarProperty Name="MXIDJOBS" ColumnName="MXIDJOBS" />
+                <ScalarProperty Name="MXARTICLEDATA" ColumnName="MXARTICLEDATA" />
+                <ScalarProperty Name="SRECRUITERNAME" ColumnName="SRECRUITERNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

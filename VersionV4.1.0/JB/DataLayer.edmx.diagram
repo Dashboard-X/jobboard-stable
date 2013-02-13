@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="afcb5cc44e4c41e29ab23aac915b3e12" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="Model.TB_APPJOBMAPPER" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_APPLICATIONS" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_APPLICATIONSTATUS" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_ARTICLES" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.TB_BRANDING" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.TB_CANDIDATES" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.TB_CATEGORIES" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_CATEGORYTOTERM" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.TB_DOCUMENTS" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.TB_EMAILRESPONSE" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.TB_EMAILRESPONSETERMS" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_EMAILTEMPLATES" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.TB_EMAILTYPES" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.TB_JOBS" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.TB_JOBTABLE" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.TB_JOBVIEWS" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_RECRUITERS" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.TB_RECUSERMAPPER" Width="1.5" PointX="6.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Model.TB_SPAMREPORT" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.TB_SUBSCRIPTIONS" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.TB_TERMS" Width="1.5" PointX="8.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.TB_TERMSLIST" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.TB_USERS" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TB_VERSION" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model.VW_AGGREGATEDMPAGE" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.VW_AGGREGATEDMULTI" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.VW_GETALLREC" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model.VW_GETAPP" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Model.VW_GETDETAILSPAGES" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.VW_GETJOBS" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.VW_GETJOBSARCH" Width="1.5" PointX="6.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Model.VW_GETJOBSARCHIVED" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.VW_GETJOBSSINGLE" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="Model.VW_GETJOBSSINGLEARCH" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model.VW_GETMYAPPS" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Model.VW_GETSUBJECTEMAILAPPS" Width="1.5" PointX="10.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Model.VW_GETUSERCANS" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.VW_JOBPOSTEDVIEW" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.VW_JOBSOUTMAIL" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.VW_JOBTORECRUITER" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Model.VW_RECARTICLES" Width="1.5" PointX="12.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Model.VW_RECUSERS" Width="1.5" PointX="14.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Model.VW_SUBREC" Width="1.5" PointX="16.75" PointY="15.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

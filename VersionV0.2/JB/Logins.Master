@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Logins.master.cs" Inherits="JB.Logins1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--add favicon-->
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+    <title>Login</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/styles/cs2.css" rel="stylesheet" type="text/css" />
+    <link href="/Recruiters/Rec.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 
+    summary
+    This code is liscenced by ahrcloud.com
+    under free creative common liscence, but 
+    attribution must be made to the author
+    site at www.ahrcloud.com or info@ahrcloud.com
+    
+    -->
+    <form id="form1" runat="server">    
+    <table>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

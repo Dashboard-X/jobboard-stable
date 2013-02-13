@@ -1,0 +1,212 @@
+﻿/*sprites*/
+
+.ux_rc_home, .ux_rc_dashboard, .ux_rc_app, .ux_rc_basic, .ux_rc_password, .ux_rc_logout, .ux_rc_edit, .ux_rc_post
+{
+    background-image: url('/images/recruitericons.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+.ux_rc_home
+{
+    background-position: 0px 2px;
+}
+
+.ux_rc_edit
+{
+    background-position: 0px -62px;
+}
+
+.ux_rc_post
+{
+    background-position: 0px -128px;
+}
+
+.ux_rc_dashboard
+{
+    background-position: 0px -20px;
+}
+
+.ux_rc_app
+{
+    background-position: 0px -84px;
+}
+
+.ux_rc_basic
+{
+    background-position: 0px -44px;
+}
+
+.ux_rc_password
+{
+    background-position: 0px -108px;
+}
+
+.ux_rc_logout
+{
+    background-position: -1px -144px;
+}
+
+body
+{
+    background-color: #000;
+}
+
+.ux_Stylea101:hover
+{
+    text-decoration: underline;
+}
+
+/* recruiter charting area */
+.ux_divchartone
+{
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+#zoomslevel
+{
+    float: right;
+    text-align: right;
+}
+
+.ux_Stylea101, .ux_Stylea2, .ux_Stylea8, .ux_StyleBlack, .ux_StyleBlackbold, .ux_StyleGray, .ux_Stylepwd, .ux_ftblack, .ux_ftblackbold, .ux_ftblackWhite, .ux_recmasterwhite
+{
+    color: #c00;
+    font-family: 'Lucida Grande' , Tahoma, Verdana, Arial, sans-serif;
+    font-size: .75em;
+    text-decoration: none;
+}
+
+#loginleft
+{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+#loginright
+{
+    border-left: 1px solid #ccc;
+    float: right;
+    margin: 10px;
+    min-height: 400px;
+    padding: 10px;
+    width: 400px;
+}
+
+.ux_Stylea2
+{
+    border-collapse: collapse;
+    color: #000;
+    font-size: .75em;
+}
+
+.ux_dottedlines
+{
+    border-bottom-color: gray;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+
+.ux_Stylea8
+{
+    border-collapse: collapse;
+    color: #1c5786;
+    font-size: .75em;
+}
+
+.ux_StyleBlack
+{
+    border-collapse: collapse;
+    color: #000;
+    font-size: .75em;
+}
+
+.ux_StyleBlackbold
+{
+    border-collapse: collapse;
+    color: #000;
+    font-size: .75em;
+    font-weight: 700;
+}
+
+.ux_StyleGray
+{
+    border-collapse: collapse;
+    color: gray;
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+.ux_line_gray
+{
+    border-collapse: collapse;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: gray;
+}
+
+.ux_setcpaneldotted
+{
+    border-top-style: dotted;
+    border-top-width: 1px;
+}
+
+.ux_Stylepwd
+{
+    background-color: transparent;
+    border-collapse: collapse;
+    color: gray;
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+.ux_ftblack
+{
+    border-collapse: collapse;
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+.ux_ftblackbold
+{
+    border-collapse: collapse;
+    font-size: .75em;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.ux_ftblackWhite
+{
+    border-collapse: collapse;
+    color: #fff;
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+.ux_recmasterwhite
+{
+    color: #ccc;
+    font-size: .75em;
+    height: 14px;
+    text-decoration: none;
+}
+
+.ux_recmasterwhite:hover
+{
+    color: #fff;
+}
+
+.ux_BoxBorder
+{
+    border-color: #000;
+    border-style: dotted;
+    border-width: 1px;
+}
+

@@ -1,0 +1,351 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Recruiters.Master.cs"
+    Inherits="JB.Recruiters.Rec" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--add favicon-->   
+    <title>Recruiters</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+    <link href="Rec.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/cs2.css" rel="stylesheet" type="text/css" />
+   
+</head>
+<body bgcolor="Black">
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="150px" bgcolor="Gray" valign="top">
+                    <table cellpadding="0" class="style1">
+                        <tr>
+                            <td valign="middle" width="20px">
+                                &nbsp;
+                            </td>
+                            <td valign="middle" width="20px">
+                                <asp:Image ID="Image11" runat="server" ImageUrl="~/images/go-home.png" />
+                            </td>
+                            <td valign="middle" width="100px">
+                                <asp:LinkButton ID="LinkButton4" runat="server" CausesValidation="False" CssClass="recmasterwhite"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    OnClick="LinkButton44_Click" Width="100px">Site Home</asp:LinkButton>
+                            </td>
+                            <td valign="top" bgcolor="White" rowspan="26" height="500px">
+                                <div style="left: 100px; top: 100px; width: 100%; height: 100%; overflow: auto;">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="20px">
+                                &nbsp;
+                            </td>
+                            <td valign="middle" onmouseover="">
+                                <asp:Image ID="Image13" runat="server" ImageUrl="~/images/dashboard.png" />
+                            </td>
+                            <td valign="middle" onmouseover="">
+                                <asp:LinkButton ID="LinkButton9" runat="server" CausesValidation="False" CssClass="recmasterwhite"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    OnClick="LinkButton4_Click" Width="100px">Dashboard</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="20px">
+                                &nbsp;
+                            </td>
+                            <td valign="middle" onmouseover="">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/recbasic.png" />
+                            </td>
+                            <td valign="middle" onmouseover="">
+                                <asp:LinkButton ID="LinkButton5" runat="server" CssClass="recmasterwhite" OnClick="LinkButton5_Click"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    CausesValidation="False" Width="100px">Basic Information</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                &nbsp;
+                            </td>
+                            <td valign="middle">
+                                <asp:Image ID="Image12" runat="server" ImageUrl="~/images/applications.png" />
+                            </td>
+                            <td valign="middle">
+                                <asp:LinkButton ID="LinkButton8" runat="server" CssClass="recmasterwhite" onmouseover="this.className='recmasterwhiteover'"
+                                    onmouseout="this.className='recmasterwhite'" OnClick="LinkButton8_Click" Width="100px">My Applications</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                &nbsp;
+                            </td>
+                            <td valign="middle">
+                                <asp:Image ID="Image5" runat="server" ImageUrl="~/images/Jobs.png" />
+                            </td>
+                            <td valign="middle">
+                                <asp:LinkButton ID="LinkButton6" runat="server" CausesValidation="False" CssClass="recmasterwhite"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    OnClick="LinkButton6_Click" Width="100px">Edit Jobs</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                &nbsp;
+                            </td>
+                            <td valign="middle">
+                                <asp:Image ID="Image10" runat="server" ImageUrl="~/images/pwdchange.png" />
+                            </td>
+                            <td valign="middle">
+                                <asp:LinkButton ID="LinkButton3" runat="server" CssClass="recmasterwhite" OnClick="LinkButton3_Click"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    CausesValidation="False" Width="100px">Change password</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle">
+                                &nbsp;
+                            </td>
+                            <td valign="middle">
+                                <asp:Image ID="Image6" runat="server" ImageUrl="~/images/AddJob.png" />
+                            </td>
+                            <td valign="middle">
+                                <asp:LinkButton ID="LinkButton7" runat="server" CausesValidation="False" CssClass="recmasterwhite"
+                                    onmouseover="this.className='recmasterwhiteover'" onmouseout="this.className='recmasterwhite'"
+                                    OnClick="LinkButton7_Click" Width="100px">Post a job</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <asp:Image ID="Image4" runat="server" ImageUrl="~/images/RecLogout.png" />
+                            </td>
+                            <td>
+                                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="recmasterwhite" onmouseover="this.className='recmasterwhiteover'"
+                                    onmouseout="this.className='recmasterwhite'" NavigateUrl="~/Logoff.aspx" Width="100px">Logout</asp:HyperLink>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                            <td valign="top">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td bgcolor="White" style="text-align: right" class="setcpaneldotted">
+                                <asp:Label ID="Label1" runat="server" CssClass="StyleR1"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

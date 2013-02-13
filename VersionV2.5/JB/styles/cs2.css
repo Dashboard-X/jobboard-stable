@@ -1,0 +1,554 @@
+﻿.ux_img_lt_green, .ux_img_lt_red, .ux_img_lt_two, .ux_img_lt_one, .ux_img_lt_copyright, .ux_img_lt_privacy, .ux_img_lt_terms, .ux_img_lt_rss, .ux_img_lt_mail, .ux_img_lt_users, .ux_img_lt_contact, .ux_img_lt_blog, .ux_img_lt_calender, .ux_img_lt_filters
+{
+    background: url('/images/icons.png');
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 12px;
+}
+.ux_img_lt_filters
+{
+    background-position: 0 -174px;
+}
+.ux_img_lt_calender
+{
+    background-position: 0 -138px;
+}
+.ux_img_lt_rss
+{
+    background-position: 0 -52px;
+}
+.ux_img_lt_blog
+{
+    background-position: 0 0;
+}
+.ux_img_lt_contact
+{
+    background-position: 0 -36px;
+}
+.ux_img_lt_users
+{
+    background-position: 0 -66px;
+}
+.ux_img_lt_mail
+{
+    background-position: 0 -10px;
+}
+.ux_img_lt_copyright
+{
+    background-position: 0 -82px;
+}
+.ux_img_lt_terms
+{
+    background-position: 0 -25px;
+}
+.ux_img_lt_privacy
+{
+    background-position: 0 -96px;
+}
+.ux_img_lt_one
+{
+    background-position: 0 -122px;
+}
+.ux_img_lt_two
+{
+    background-position: 0 -108px;
+}
+.ux_img_lt_red
+{
+    background-position: 0 -159px;
+}
+.ux_img_lt_green
+{
+    background-position: 0 -149px;
+}
+.ux_cfooter, .ux_setrightbg, .ux_gridrowdb, #cbottompanel
+{
+    background: #fff;
+}
+.ux_cfooter
+{
+    border-top: 1px dotted #000;
+}
+.ux_cfooter, .ux_alignright, .ux_hright2
+{
+    text-align: right;
+}
+.ux_leftpanel, .ux_centerpanel, .ux_rightpanel, .ux_pwleft, #loginleft, #cleftpanel, #crightpanel, .ux_rstpwdsetleftdiv, .ux_setrightdiva, .ux_setrightdivb, .ux_rstpwdsetleftdivw1, .ux_ftlabel, .ux_marker, .ux_header, .ux_hright2, .ux_left_align_frec, .ux_right_align_frec, .ux_dvleft, #dftimprovelft, #divftsleft10, .ux_rights, .ux_rstpwdsetlu
+{
+    float: left;
+}
+.ux_leftpanel, .ux_leftsbanner
+{
+    width: 200px;
+}
+.ux_centerpanel
+{
+    margin: 0 20px 0 20px;
+    width: 600px;
+}
+.ux_rightpanel
+{
+    width: 160px;
+}
+.ux_TextBoxStyle, .ux_simpleboxdetail, .ux_boxcorner, .ux_divsimpleboxlight
+{
+    border: 1px solid gray;
+}
+.ux_TextBoxStyle, .ux_gridclear, .ux_style1, .ux_ftblackwhite, .ux_divchkbxpop, .ux_stylea3modified, .ux_ftblack
+{
+    border-collapse: collapse;
+}
+.ux_TextBoxStyle, .ux_searchtextboxline, .ux_Stylea101, .ux_ftblackwhite, .ux_fontgray, .ux_simplefontblack, .ux_blackh2, .ux_simplefontwhite, .ux_simplefontblackbld, .ux_divchkbxpop, .ux_stylea3modified, .ux_ftblack
+{
+    font-size: .75em;
+}
+.ux_TextBoxStyle
+{
+    min-width: 300px;
+}
+.ux_TextBoxStyle, .ux_button
+{
+    padding: 6px;
+}
+.ux_blogframe, .ux_style1, .ux_jseekerframe, .ux_jbfooter, .ux_leftdiv, .ux_googads, .ux_simplecleargreyln, .ux_tpboundbrdr
+{
+    width: 100%;
+}
+.ux_blogframe, .ux_jseekerframe
+{
+    height: 400px;
+}
+.ux_blogframe, .ux_gridclear, .ux_jseekerframe
+{
+    border: none;
+}
+.ux_border, #loginleft
+{
+    border: 1px solid Gray;
+}
+.ux_border, .ux_divchkbxpop
+{
+    max-width: 200px;
+}
+.ux_TextBoxStyle:hover, .ux_gridrowdb:hover
+{
+    background: #dee1e7;
+}
+.ux_TextBoxStyle:hover
+{
+    border-color: #000;
+}
+.ux_alignleft, .ux_banner, #topwrapper
+{
+    text-align: left;
+}
+.ux_setrightbg, #loginright, .ux_simpleboxdetail
+{
+    min-height: 400px;
+}
+.ux_setrightbg, #loginleft, #loginright, .ux_simpleboxdetail
+{
+    padding: 10px;
+}
+.ux_checkboxlist, .ux_radiobuttonlist .ux_fthlinkblack, .ux_ftblack, .ux_ftblackbd, .ux_fthlinkblack, .ux_fthlinkblackbd, .ux_simplefontblack, .ux_blackh2, .ux_simplefontblackbld, .ux_button
+{
+    color: #000;
+}
+.ux_checkboxlist, .ux_flist, .ux_radiobuttonlist
+{
+    list-style: none;
+}
+.ux_checkboxlist, body, .ux_radiobuttonlist
+{
+    margin: 0;
+}
+.ux_checkboxlist, .ux_alignleft, .ux_radiobuttonlist
+{
+    padding: 0;
+}
+.ux_gridmain, .ux_ln_ccc
+{
+    border-bottom: 1px solid #ccc;
+}
+.ux_gridmain
+{
+    min-height: 100px;
+    padding: 10px 5px 10px 5px;
+}
+.ux_page, .ux_pagecurrent,
+.ux_ftgraybd, .ux_fthlinkblackbd, .ux_fthlinkblack, .ux_ftgray, .ux_ftwhitebd, .ux_ftwhite, .ux_ftblackbd, .ux_fthlinkblack, .ux_ftblack, p, .ux_ulist, .ux_TextBoxStyle, .ux_Stylea101, .ux_ftblackwhite, .ux_fontredh1, .ux_fontgray, .ux_stylea3modified, .ux_ftblack, .ux_divchkbxpop, .ux_simplefontblack, .ux_blackh2, .ux_simplefontwhite, .ux_simplefontblackbld
+{
+    font-family: 'Lucida Grande' ,Tahoma,Verdana,Arial,sans-serif;
+}
+p, .ux_ulist
+{
+    color: #333;
+}
+.ux_page, .ux_pagecurrent,
+.ux_ulist, .ux_ftgraybd, .ux_fthlinkblack, .ux_ftgray, .ux_ftwhitebd, .ux_ftwhite, .ux_ftblackbd, .ux_fthlinkblack, .ux_ftblack
+{
+    font-size: 0.75em;
+}
+h4, h3, h2, h1
+{
+    font: 1.825em "segoe ui light" , "segoe ui" , "segoe" , "tahoma" , "verdana" , "arial" , "sans-serif";
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 0.25em 0 0.75em;
+}
+h4, h3, h2, h1, .ux_ftgray, .ux_ftgraybd
+{
+    color: Gray;
+}
+.ux_ftblackbd, .ux_ftwhitebd, .ux_fthlinkblackbd, .ux_ftgraybd
+{
+    font-weight: bold;
+}
+.ux_ftwhite, .ux_ftwhitebd, .ux_ftblackwhite, .ux_recbgstytle, .ux_simplefontwhite, .ux_button:active
+{
+    color: #fff;
+}
+.ux_fthlinkblack, .ux_fthlinkblackbd, .ux_Stylea101, .ux_fontredh1, .ux_blackh2, .ux_simplefontwhite, .ux_simplefontblackbld, .ux_button
+{
+    text-decoration: none;
+}
+.ux_fthlinkblack:hover, .ux_fthlinkblackbd:hover, .ux_simplefontblackbld:hover, .ux_blackh2:hover, .ux_fontredh1:hover, .ux_Stylea101:hover
+{
+    text-decoration: underline;
+}
+.ux_pwleft
+{
+    width: 230px;
+}
+.ux_lcenter, .ux_upperwrap, .ux_pgwidthset, .ux_jbfooter, #topwrapper, .ux_simplecleargreyln
+{
+    margin: 0 auto;
+}
+.ux_lcenter
+{
+    width: 900px;
+}
+.ux_Stylea101, .ux_fontredh1
+{
+    color: #c00;
+}
+#loginleft, .ux_banner
+{
+    background: #ccc;
+}
+#loginleft, .ux_align_frec
+{
+    border: 1px solid #ccc;
+}
+#loginleft
+{
+    margin: 100px 10px 10px 10px;
+}
+#loginright
+{
+    border-left: 1px solid #ccc;
+    margin: 10px;
+    width: 400px;
+}
+#loginright, .ux_setrightdiv, .ux_ncprog1, .ux_browser, .ux_dvright, #dftimprovert
+{
+    float: right;
+}
+#cleftpanel, .ux_upperwrap
+{
+    background: #5b5b5b;
+}
+#cleftpanel, #crightpanel, .ux_upperwrap
+{
+    height: 100%;
+}
+#cleftpanel
+{
+    width: 20%;
+}
+#crightpanel
+{
+    width: 80%;
+}
+.ux_upperwrap
+{
+    width: 98%;
+}
+.ux_pdleft4, .ux_weblogheader, .ux_activateactopbanner
+{
+    padding-left: 4px;
+}
+.ux_rstpwdsetleftdiv, .ux_divback, .ux_lftp2, .ux_gridloadcent, .ux_alignleft, .ux_weblogheader, .ux_activateactopbanner
+{
+    vertical-align: middle;
+}
+.ux_rstpwdsetleftdiv, .ux_left_align_frec
+{
+    width: 100px;
+}
+.ux_setrightdiv, .ux_hright2
+{
+    vertical-align: bottom;
+}
+.ux_setrightdiv, .ux_setrightdiva
+{
+    width: 20px;
+}
+.ux_setrightdiva, .ux_setrightdivb, .ux_tpbar, .ux_recbgstytle, .ux_divback
+{
+    height: 20px;
+}
+.ux_rstpwdsetleftdivw1, .ux_gridloadcent
+{
+    width: 50px;
+}
+.ux_box2, .ux_imgborder
+{
+    border-color: gray;
+    border-width: 1px;
+}
+.ux_box2
+{
+    border-style: solid;
+    height: 450px;
+}
+.ux_ftlabel
+{
+    padding-right: 20px;
+}
+.ux_pgwidthset
+{
+    width: 1000px;
+}
+.ux_leftsbanner, .ux_marker, .ux_header
+{
+    height: 50px;
+}
+.ux_marker
+{
+    width: 5px;
+}
+.ux_header
+{
+    width: 500px;
+}
+.ux_hright2, .ux_boxmid
+{
+    padding-bottom: 2px;
+}
+.ux_hright2
+{
+    padding-top: 10px;
+    width: 380px;
+}
+.ux_jbfooter
+{
+    border-top: 6px solid #ccc;
+    padding: 2px 0 2px 0;
+}
+.ux_topwrap
+{
+    margin: 0 0 20px 0;
+}
+#topwrapper
+{
+    background: #000;
+    height: 24px;
+}
+#topwrapper, .ux_ncprog
+{
+    padding-left: 10px;
+}
+.ux_fontredh1
+{
+    font-size: 16px;
+}
+.ux_fontgray, .ux_searchtextboxline
+{
+    border-bottom: 1px dashed #000;
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.ux_fontgray
+{
+    color: gray;
+    font-style: italic;
+}
+.ux_googads, .ux_align_frec, .ux_button
+{
+    background: #f5f5f5;
+}
+.ux_googads
+{
+    height: 500px;
+}
+.ux_align_frec
+{
+    width: 594px;
+}
+.ux_left_align_frec, .ux_boxcorner
+{
+    padding: 4px;
+}
+.ux_right_align_frec
+{
+    width: 450px;
+}
+.ux_ln_ccc
+{
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+.ux_simplecleargreyln
+{
+    border-top: 1px solid gray;
+}
+.ux_recbgstytle, .ux_divback, .ux_button:hover
+{
+    background: #c00;
+}
+.ux_recbgstytle
+{
+    padding-left: .75em;
+    padding-top: 4px;
+}
+.ux_contactstylist, .ux_divsimpleboxchart, .ux_box3
+{
+    border: 1px solid #dedede;
+}
+.ux_contactstylist
+{
+    height: 40px;
+    margin: 30px;
+    padding: 30px 20px 10px;
+    width: 300px;
+}
+.ux_contactstylist, .ux_gridloadcent
+{
+    text-align: center;
+}
+.ux_divsimpleboxchart, .ux_divsimpleboxlight, .ux_box3
+{
+    padding: 2px;
+}
+.ux_divback
+{
+    border-top: 4px solid #000;
+    padding-left: 6px;
+}
+
+.ux_divsimpleboxlight
+{
+    background: #eeeee0;
+    margin-top: 2px;
+}
+.ux_simplefontblackbld
+{
+    font-weight: 700;
+}
+
+.ux_button
+{
+    font: 1em arial,serif;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.ux_button:active
+{
+    background: #a5a5a5;
+}
+.ux_tpboundbrdr
+{
+    border-bottom: 1px dotted #000;
+}
+#internalclm
+{
+    padding-right: 10px;
+}
+.ux_lftp2
+{
+    padding-bottom: 1px;
+    padding-left: 1px;
+}
+.ux_setpxline
+{
+    height: 4px;
+}
+.ux_ncprog1, .ux_browser
+{
+    padding-right: 4px;
+}
+.ux_boxmid
+{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.ux_box3
+{
+    background: #eee;
+    color: #444;
+    width: 150px;
+}
+.ux_mainsrchdivs
+{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.ux_divchkbxpop
+{
+    height: 108px;
+    left: 100px;
+    overflow: auto;
+}
+.ux_browser
+{
+    height: 14px;
+    margin-top: -4px;
+}
+.ux_divheightsrch, .ux_setheight
+{
+    height: 10px;
+}
+.ux_weblogheader, .ux_activateactopbanner
+{
+    background: gray;
+    height: 16px;
+}
+#dvclear, .ux_cleardata
+{
+    clear: both;
+}
+.ux_dvright, #dftimprovert
+{
+    padding: 2px 4px 0 0;
+}
+
+/* pager css by farhan */
+.ux_pagecurrent {
+    background-color: #c00000;
+    padding: 6px 8px 6px 8px;
+    margin: 2px;
+    color: #fff;
+    min-width: 10px;
+    text-decoration:none;
+    float: left
+}
+
+.ux_page {
+    background-color: #ccc;
+    padding: 6px 8px 6px 8px;
+    margin: 2px;
+    color: #000;
+    min-width: 10px;
+    text-decoration:none;
+    float: left
+}
+
+.ux_page:hover {
+    background-color: #c00000;
+    color: #fff;
+}
+

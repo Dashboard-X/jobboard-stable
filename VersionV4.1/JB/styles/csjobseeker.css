@@ -1,0 +1,89 @@
+﻿.ux_cn_logout, .ux_cn_password, .ux_cn_basic, .ux_cn_app, .ux_cn_dashboard, .ux_cn_home {
+    background-image: url('/images/jobseekericon.png');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+}
+
+.ux_cn_home { background-position: 0px 0px; }
+
+.ux_cn_dashboard { background-position: 0px -22px; }
+
+.ux_cn_app { background-position: 0px -44px; }
+
+.ux_cn_basic { background-position: 0px -64px; }
+
+.ux_cn_password { background-position: 0px -88px; }
+
+.ux_cn_logout { background-position: -1px -106px; }
+
+body { background: #000; }
+
+.ux_style1, .ux_Stylepwd, .ux_ftblack, .ux_line_gray, .ux_TextBoxStyle { border-collapse: collapse; }
+
+.ux_style1 { width: 100%; }
+
+.ux_cannoteslft, .ux_cannotesrt { padding-left: 50px; }
+
+.ux_cannoteslft { width: 300px; }
+
+.ux_cannotesrt { margin-left: 400px; }
+
+#applicationsbreak { height: 300px; }
+
+.ux_jseekermidback {
+    background: #fff;
+    height: 400px;
+    padding: 30px 30px 0;
+}
+
+.ux_topnavmajor {
+    background: gray;
+    height: 16px;
+    padding-left: 4px;
+}
+
+.ux_canhomepagelinks:hover { color: #000; }
+
+.ux_TextBoxStyle, .ux_ftblack, .ux_Stylepwd, .ux_canmasterwhite, .ux_canhomepagelinks { font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif; }
+
+.ux_canhomepagelinks {
+    border-bottom-color: gray;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    vertical-align: middle;
+}
+
+.ux_canhomepagelinks, .ux_Stylepwd, .ux_line_gray { color: gray; }
+
+.ux_canhomepagelinks, .ux_canmasterwhite, .ux_Stylepwd, .ux_ftblack, .ux_TextBoxStyle { font-size: .75em; }
+
+.ux_canhomepagelinks, .ux_canmasterwhite { text-decoration: none; }
+
+.ux_canmasterwhite { color: #ccc; }
+
+.ux_canmasterwhite:hover { color: #fff; }
+
+.ux_setcpaneldotted { border-top-style: dotted; }
+
+.ux_setcpaneldotted, .ux_line_gray { border-top-width: 1px; }
+
+.ux_Stylepwd {
+    background: transparent;
+    margin-right: 5px;
+}
+
+.ux_cn_header {
+    background: #c00;
+    height: 30px;
+    padding: 2px 0 0 6px;
+}
+
+.ux_line_gray { border-top-style: solid; }
+
+.ux_TextBoxStyle {
+    border-color: GrayText;
+    border-style: solid;
+    border-width: 1px;
+    padding: 6px;
+}

@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Candidates.master.cs"
+    Inherits="JB.JobSeekers.Candidates" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--add favicon-->
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+    <title>Jobseeker</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/styles/cs2.css" rel="stylesheet" type="text/css" />
+   
+    <link href="JSeeker.css" rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="Black" onload="divfix();">
+    <form id="form1" class="upperwrop" runat="server">
+    
+ <!-- left panel -->
+        <div id="cleftpanel">
+            <div>
+                <asp:Image ID="Image6" runat="server" ImageUrl="~/images/go-home.png" />
+                <asp:LinkButton ID="LinkButton44" runat="server" CssClass="canmasterwhite" OnClick="LinkButton44_Click"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">Site Home</asp:LinkButton>
+            </div>
+            <div>
+                <asp:Image ID="Image7" runat="server" ImageUrl="~/images/dashboard.png" />
+                <asp:LinkButton ID="LinkButton5" runat="server" CssClass="canmasterwhite" OnClick="LinkButton4_Click"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">DashBoard</asp:LinkButton>
+            </div>
+            <div>
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/images/applications.png" />
+                <asp:LinkButton ID="LinkButton3" runat="server" CssClass="canmasterwhite" OnClick="LinkButton3_Click"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">My Applications</asp:LinkButton>
+            </div>
+            <div>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/recbasic.png" />
+                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="canmasterwhite" OnClick="LinkButton1_Click"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">Basic Information</asp:LinkButton>
+            </div>
+            <div>
+                <asp:Image ID="Image5" runat="server" ImageUrl="~/images/pwdchange.png" />
+                <asp:LinkButton ID="LinkButton2" runat="server" CssClass="canmasterwhite" OnClick="LinkButton2_Click"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">Change password</asp:LinkButton>
+            </div>           
+            <div><asp:Image ID="Image2" runat="server" ImageUrl="~/images/cn_notes.png" />
+                <asp:LinkButton ID="LinkButton4" runat="server" CssClass="canmasterwhite" OnClick="LinkButton4_Click1"
+                    onmouseover="this.className='canmasterwhiteover'" onmouseout="this.className='canmasterwhite'"
+                    CausesValidation="False">Notes</asp:LinkButton>
+            </div>
+            <div>
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/images/RecLogout.png" />
+                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="canmasterwhite" onmouseover="this.className='canmasterwhiteover'"
+                    onmouseout="this.className='canmasterwhite'" NavigateUrl="~/Logoff.aspx">Logout</asp:HyperLink>
+            </div>
+        </div>
+ 
+ 
+ 
+ <!-- this is the middle one -->
+        <div id="crightpanel">
+            <div style="left: 100px; top: 100px; width: 100%; height: 100%; overflow: auto;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+   
+   
+
+       
+       
+        <div class="cleardata">
+        </div>
+        <!-- bottom -->
+        <div id="cbottompanel">
+            <div style="text-align: right" class="setcpaneldotted">
+                <asp:Label ID="Label1" runat="server" CssClass="StyleR1" Style="text-align: right"></asp:Label>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

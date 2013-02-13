@@ -1,0 +1,32 @@
+﻿.ux_pdleft4, .ux_arecstlyletopbg
+{
+    padding-left: 4px;
+}
+.ux_arecstyle7
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.ux_arecstyle49, .ux_arecstlyletopbg
+{
+    background: gray;
+}
+.ux_arecstyle50
+{
+    border-bottom-style: dotted;
+}
+.ux_arecstyle50, .ux_box2
+{
+    border-color: gray;
+    border-width: 1px;
+}
+.ux_arecstlyletopbg
+{
+    height: 16px;
+    vertical-align: middle;
+}
+.ux_box2
+{
+    border-style: solid;
+    height: 450px;
+}
